@@ -1,14 +1,33 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
 import "./App.css";
 
+import Home from "./pages/Home";
+import Portfolio from "./pages/W/Portfolio";
+
+import NavBar from "./components/Navbar";
+
 function App() {
-  const [count, setCount] = useState(0);
+  const routes = (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/w" element={<Portfolio />} />
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
+  );
 
   return (
     <>
-      <h1 className="text-3xl underline">Hässäkkä</h1>
+      <Router>
+        <NavBar />
+        {routes}
+      </Router>
     </>
   );
 }
