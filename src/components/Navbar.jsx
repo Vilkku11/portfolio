@@ -1,20 +1,39 @@
 import { useLocation } from "react-router-dom";
+import clsx from "clsx";
 
 const NavBar = () => {
   const location = useLocation();
   console.log("location");
   console.log(location);
+  console.log(location.pathname);
 
-  const links = [
-    { name: "Main", url: "/" },
-    { name: "W", url: "/w" },
-  ];
+  let pageLinks = [];
+  let navbar = "";
+  let buttons = "";
+
+  if (location.pathname === "/") {
+    pageLinks = [
+      { name: "Main", url: "/" },
+      { name: "W", url: "/w" },
+    ];
+    navbar = clsx("shadow-xl w-full fixed top-0 left-0 bg-dark z-10");
+    buttons = clsx("items-center justify-between py-4 px-10");
+  } else if (location.pathname === "/w") {
+    pageLinks = [
+      { name: "THIS PAGEEE", url: "/w" },
+      { name: "HOMEEE", url: "/" },
+    ];
+    navbar = clsx(
+      "w-full fixed top-0 left-0 bg-black z-10 border border-white"
+    );
+    buttons = clsx("items-center justify-between py-4 px-10 text-white");
+  }
 
   return (
-    <div className="shadow-xl w-full fixed top-0 left-0 bg-dark z-10">
-      <div className="items-center justify-between py-4 px-10">
+    <div className={navbar}>
+      <div className={buttons}>
         <ul>
-          {links.map((link) => (
+          {pageLinks.map((link) => (
             <li key={link.name}>
               <a href={link.url}>{link.name}</a>
             </li>
