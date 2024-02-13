@@ -8,8 +8,6 @@ const Cursor = ({ cursorVariant }) => {
     y: 0,
   });
 
-  const [previousVariant, setPreviousVariant] = useState("default");
-
   const variants = {
     default: {
       x: mousePosition.x - 32,
