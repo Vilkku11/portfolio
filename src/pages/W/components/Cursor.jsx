@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, animate } from "framer-motion";
 import "./Cursor.css";
 
 const Cursor = ({ cursorVariant }) => {
@@ -7,6 +7,34 @@ const Cursor = ({ cursorVariant }) => {
     x: 0,
     y: 0,
   });
+
+  const [previousVariant, setPreviousVariant] = useState("default");
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 32,
+      y: mousePosition.y - 32,
+      height: 64,
+      width: 64,
+      offset: 32,
+      transition: {
+        duration: 0,
+        ease: "easeInOut",
+      },
+    },
+    text: {
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      height: 150,
+      width: 150,
+      offset: 75,
+      transition: {
+        duration: 0,
+        ease: "easeInOut",
+      },
+      mixBlendMode: "difference",
+    },
+  };
 
   useEffect(() => {
     const mouseMove = (event) => {
@@ -25,26 +53,16 @@ const Cursor = ({ cursorVariant }) => {
     };
   }, []);
 
-  const variants = {
-    default: {
-      x: mousePosition.x - 32,
-      y: mousePosition.y - 32,
-    },
-    text: {
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
-      height: 150,
-      width: 150,
-      //backgroundColor: "black",
-      mixBlendMode: "difference",
-    },
-  };
-
   return (
     <motion.div
       className="cursor"
       variants={variants}
       animate={cursorVariant}
+      style={{ offset: 0 }}
+      //style={{
+      // left: mousePosition.x - offset,
+      // top: mousePosition.y - offset,
+      //}}
     />
   );
 };

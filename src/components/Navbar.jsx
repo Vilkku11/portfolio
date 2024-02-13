@@ -16,7 +16,9 @@ const NavBar = () => {
       { name: "Main", url: "/" },
       { name: "W", url: "/w" },
     ];
-    navbar = clsx("shadow-xl w-full fixed top-0 left-0 bg-dark z-10");
+    navbar = clsx(
+      "text-center shadow-xl w-full fixed top-0 left-0 bg-dark z-10"
+    );
     buttons = clsx("items-center justify-between py-4 px-10");
   } else if (location.pathname === "/w") {
     pageLinks = [
@@ -24,7 +26,7 @@ const NavBar = () => {
       { name: "HOMEEE", url: "/" },
     ];
     navbar = clsx(
-      "w-full fixed top-0 left-0 bg-black z-10 border border-white"
+      "text-center w-full fixed top-0 left-0 bg-black z-10 border border-white"
     );
     buttons = clsx("items-center justify-between py-4 px-10 text-white");
   }
