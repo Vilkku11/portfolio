@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import ProjectShowCase from "./components/ProjectShowCase";
 import Paragraph from "./components/Paragraph";
 import ParagraphWords from "./components/ParagraphWords";
+import Curve from "./components/curve/Curve";
 
 import "./Portfolio.css";
 
@@ -43,6 +44,7 @@ const Portfolio = () => {
           or something like that."
         />
         <ParagraphWords value="A small amount of text, maybe some introduction text or something like that. Maybe a bit what kind of things could be added here on this page or something like that." />
+        <Curve />
         <h1
           className="max-w-max mt-80 text-white text-6xl font-mono"
           onMouseEnter={textEnter}
