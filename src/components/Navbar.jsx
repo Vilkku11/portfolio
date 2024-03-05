@@ -12,10 +12,11 @@ const NavBar = () => {
   let buttons = "";
 
   if (location.pathname === "/") {
-    pageLinks = [
+    pageLinks = [];
+    /*pageLinks = [
       { name: "Main", url: "/" },
       { name: "W", url: "/w" },
-    ];
+    ];*/
     navbar = clsx(
       "text-center shadow-xl w-full fixed top-0 left-0 bg-dark z-10"
     );
