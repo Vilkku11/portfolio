@@ -21,8 +21,13 @@
 
 .line .box {
   height: 40px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   position: relative;
   top: -20px;
   z-index: 1;
+}
+
+.line .box:hover {
+  height: 150px;
+  top: -75px;
 }
