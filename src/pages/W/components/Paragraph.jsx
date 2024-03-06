@@ -8,9 +8,6 @@ const Paragraph = ({ value }) => {
     offset: ["start 0.8", "start 0.25"],
   });
 
-  useEffect(() => {
-    scrollYProgress.on("change", (e) => console.log(e));
-  });
   return (
     <div>
       <div style={{ height: "100vh" }}></div>
