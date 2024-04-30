@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import clsx from "clsx";
 
 const NavBar = () => {
   const location = useLocation();
@@ -17,19 +16,17 @@ const NavBar = () => {
       { name: "Main", url: "/" },
       { name: "W", url: "/w" },
     ];*/
-    navbar = clsx(
-      "text-center shadow-xl w-full fixed top-0 left-0 bg-dark z-10"
-    );
-    buttons = clsx("items-center justify-between py-4 px-10");
+    navbar = "text-center shadow-xl w-full fixed top-0 left-0 bg-dark z-10";
+    buttons = "items-center justify-between py-4 px-10";
   } else if (location.pathname === "/w") {
     pageLinks = [
       { name: "THIS PAGEEE", url: "/w" },
       { name: "HOMEEE", url: "/" },
     ];
-    navbar = clsx(
-      "text-center w-full fixed top-0 left-0 bg-black z-10 border border-white"
-    );
-    buttons = clsx("items-center justify-between py-4 px-10 text-white");
+    navbar =
+      "text-center w-full fixed top-0 left-0 bg-black z-10 border border-white";
+
+    buttons = "items-center justify-between py-4 px-10 text-white";
   }
 
   return (

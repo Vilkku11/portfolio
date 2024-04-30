@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { motion, animate } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "./Cursor.css";
 
 const Cursor = ({ cursorVariant }) => {
