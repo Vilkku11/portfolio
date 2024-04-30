@@ -5,7 +5,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full sticky top-[100vh] border-t border-white">
+    <div className="flex flex-col w-full sticky top-[100vh]">
       <ul className="flex flex-col">
         {Links.map((link) => (
           <li key={link.name} className="text-xl my-1">
