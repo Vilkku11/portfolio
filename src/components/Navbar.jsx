@@ -24,7 +24,7 @@ const NavBar = () => {
       { name: "HOMEEE", url: "/" },
     ];
     navbar =
-      "text-center w-full fixed top-0 left-0 bg-black z-10 border border-white";
+      "text-center w-full fixed top-0 left-0 bg-black border border-white";
 
     buttons = "items-center justify-between py-4 px-10 text-white";
   }

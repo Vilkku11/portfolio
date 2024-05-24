@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { IconMenu2 } from "@tabler/icons-react";
 
 import Cursor from "./components/cursor/Cursor";
 import Footer from "./components/Footer";
@@ -12,10 +13,11 @@ import "./Portfolio.css";
 const Portfolio = () => {
   const [cursorVariant, setCursorVariant] = useState("default");
 
+  const stickyElement = useRef(null);
+
   const textEnter = () => {
     setCursorVariant("text");
   };
-
   const textLeave = () => {
     setCursorVariant("default");
   };
@@ -29,6 +31,7 @@ const Portfolio = () => {
         >
           Welcome!
         </h1>
+        <IconMenu2 ref={stickyElement} stroke={2} color="white" />
         <p
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
@@ -56,7 +59,11 @@ const Portfolio = () => {
         <ProjectShowCase />
       </div>
       <Footer />
-      <Cursor cursorVariant={cursorVariant} />
+      <Cursor
+        cursorVariant={cursorVariant}
+        setCursorVariant={setCursorVariant}
+        stickyElement={stickyElement}
+      />
     </div>
   );
 };
