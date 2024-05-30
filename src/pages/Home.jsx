@@ -1,4 +1,10 @@
 const Home = () => {
-  return <h1 className="text-center mt-20">is this home??</h1>;
+  const headingStyle = {
+    color: "black",
+    fontSize: "2vw",
+    textAlign: "center",
+  };
+
+  return <h1 style={headingStyle}>is this home??</h1>;
 };
 export default Home;
