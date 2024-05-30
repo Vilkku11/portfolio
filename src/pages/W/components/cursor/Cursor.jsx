@@ -21,6 +21,7 @@ const Cursor = ({ cursorVariant, setCursorVariant, stickyElement }) => {
         duration: 0,
         ease: "easeInOut",
       },
+      mixBlendMode: "difference",
     },
     text: {
       x: mousePosition.x - 75,
@@ -40,7 +41,7 @@ const Cursor = ({ cursorVariant, setCursorVariant, stickyElement }) => {
     console.log("mouseHOVER");
     setIsHovered(true);
     //console.log(isHovered);
-    setCursorVariant("text");
+    setCursorVariant("default");
   };
 
   const manageMouseLeave = () => {
@@ -52,6 +53,19 @@ const Cursor = ({ cursorVariant, setCursorVariant, stickyElement }) => {
 
   const mouseMove = (event) => {
     console.log("ishovered in mousemove", isHovered);
+    const { left, top, width, height } =
+      stickyElement.current.getBoundingClientRect();
+
+    const center = { x: left + width / 2, y: top + height / 2 };
+
+    if (isHovered) {
+      setMousePosition({
+        x: center.x,
+        y: center.y,
+      });
+      return;
+    }
+
     setMousePosition({
       x: event.clientX,
       y: event.clientY,
