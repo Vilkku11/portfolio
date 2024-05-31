@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-import Curve from "./components/curve/curve/Curve";
+import Curve from "./components/curve/Curve";
 
 import "./Portfolio.css";
 
