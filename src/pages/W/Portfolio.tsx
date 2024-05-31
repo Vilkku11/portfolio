@@ -1,5 +1,7 @@
 import { useState, useRef } from "react";
 
+import Curve from "./components/curve/curve/Curve";
+
 import "./Portfolio.css";
 
 const Portfolio = () => {
@@ -8,6 +10,7 @@ const Portfolio = () => {
       <div className="item-container">
         <h1>Welcome!</h1>
       </div>
+      <Curve />
     </div>
   );
 };
