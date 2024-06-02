@@ -1,0 +1,16 @@
+.header {
+  position: relative;
+  z-index: 999;
+}
+
+.list {
+  position: fixed;
+  left: 50%;
+  top: 0px;
+  height: 10px;
+  width: 100%;
+  border-radius: 0px;
+  border-width: 1px;
+  border-color: rgb(255 255 255 0.4);
+  background-color: rgb(255 255 255 0.8);
+}
