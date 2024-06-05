@@ -1,0 +1,20 @@
+.paragraph-text {
+  display: flex;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  max-width: 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.word-container {
+  margin-top: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.word-item {
+  position: absolute;
+  opacity: 0;
+}

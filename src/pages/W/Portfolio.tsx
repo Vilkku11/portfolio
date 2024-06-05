@@ -4,6 +4,8 @@ import Curve from "./components/curve/Curve";
 import Cursor from "./components/cursor/Cursor";
 import Header from "./components/header/Header";
 
+import ParagraphWords from "./components/paragraph/ParagraphWords";
+
 import "./Portfolio.css";
 
 const Portfolio = () => {
@@ -14,6 +16,7 @@ const Portfolio = () => {
       <Header />
       <div className="item-container">
         <h1 ref={stickyElement}>Welcome!</h1>
+        <ParagraphWords text="test 12309 12430 91290 129 00492" />
       </div>
       <Curve />
       <Cursor stickyElement={stickyElement} />
