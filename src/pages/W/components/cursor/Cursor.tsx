@@ -35,7 +35,7 @@ type MixBlendMode =
   | "color"
   | "luminosity";
 
-const Cursor = ({ stickyElement }) => {
+const Cursor = ({ stickyElement }: { stickyElement: any }) => {
   const { currentVariant, setVariant } = useVariantStore();
 
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({
