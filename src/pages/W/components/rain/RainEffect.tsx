@@ -20,7 +20,6 @@ const RainEffect = () => {
   };
 
   const raindrops = createRaindrops(50);
-  console.log(raindrops);
   return <div className="rain-container">{raindrops}</div>;
 };
 
