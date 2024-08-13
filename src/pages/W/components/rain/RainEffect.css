@@ -4,9 +4,9 @@
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 1;
   overflow: hidden;
   pointer-events: none;
+  z-index: -1;
 }
 
 .rain {
@@ -22,7 +22,6 @@
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  z-index: 1;
 }
 
 @keyframes rain {
