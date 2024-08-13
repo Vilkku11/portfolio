@@ -7,6 +7,7 @@ import RainEffect from "./components/rain/RainEffect";
 
 import ParagraphWords from "./components/paragraph/ParagraphWords";
 import SlotText from "./components/SlotText";
+import Section from "./components/section/Section";
 
 import "./Portfolio.css";
 
@@ -14,19 +15,13 @@ const Portfolio = () => {
   const stickyElement = useRef<HTMLHeadingElement | null>(null);
 
   return (
-    <div className="background">
-      <RainEffect />
-      <Header />
-      <div className="item-container">
-        <h1 ref={stickyElement}>Welcome!</h1>
-        <ParagraphWords text="test 12309 12430 91290 129 00492" />
-        <div className="slot-text">
-          this is a <SlotText />. to see how this is functioning
-        </div>
+    <div className="wrapper">
+      <div className="background">
+        <RainEffect />
       </div>
-      <div className="other-container">
-        <Curve />
-        <Cursor stickyElement={stickyElement} />
+      <Header />
+      <div className="content">
+        <h1>lol</h1>
       </div>
     </div>
   );
