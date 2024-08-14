@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
+import "./Paragraph.css";
 
 type SingleWord = {
   word: string;

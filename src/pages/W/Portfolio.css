@@ -2,6 +2,8 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .background {
@@ -14,6 +16,16 @@
 }
 
 .content {
-  position: absolute;
+  position: relative;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 35%;
+}
+
+h1 {
+  font-size: 6rem;
 }

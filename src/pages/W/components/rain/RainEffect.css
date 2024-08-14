@@ -29,6 +29,6 @@
     transform: rotate(105deg) translateX(0);
   }
   to {
-    transform: rotate(105deg) translateX(calc(100vh + 20px));
+    transform: rotate(105deg) translateX(calc(var(--container-height) + 20px));
   }
 }
