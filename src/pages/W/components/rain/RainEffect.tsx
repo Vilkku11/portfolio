@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useLayoutEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./RainEffect.css";
 
 const RainEffect = () => {
@@ -15,16 +15,15 @@ const RainEffect = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerHeight, setContainerHeight] = useState<number>(0);
 
-  const rainContainerStyle: RainContainerStyle = {
-    "--container-height": `${containerHeight}px`,
-  };
+  const [rainContainerStyle, setRainContainerStyle] =
+    useState<RainContainerStyle>();
 
   useEffect(() => {
-    console.log(containerRef);
-    console.log(containerRef.current);
     if (containerRef.current) {
       setContainerHeight(containerRef.current.clientHeight);
-      console.log(containerRef.current.clientHeight);
+      setRainContainerStyle({
+        "--container-height": `${containerRef.current.clientHeight}px`,
+      });
     }
   }, []);
 
@@ -32,7 +31,7 @@ const RainEffect = () => {
     const drops: JSX.Element[] = [];
 
     for (let i = 0; i < numDrops; i++) {
-      const startFromSide: boolean = Math.random() > 0.5;
+      const startFromSide: boolean = Math.random() > 0.8;
 
       const left: string = startFromSide
         ? `${containerHeight + Math.random() * 50}px`
