@@ -14,9 +14,9 @@ const RainEffect = () => {
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerHeight, setContainerHeight] = useState<number>(0);
-
   const [rainContainerStyle, setRainContainerStyle] =
     useState<RainContainerStyle>();
+  const [raindrops, setRaindrops] = useState<JSX.Element[]>([]);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -24,8 +24,9 @@ const RainEffect = () => {
       setRainContainerStyle({
         "--container-height": `${containerRef.current.clientHeight}px`,
       });
+      setRaindrops(createRaindrops(100));
     }
-  }, []);
+  }, [window.innerWidth, window.innerHeight]);
 
   const createRaindrops = (numDrops: number): JSX.Element[] => {
     const drops: JSX.Element[] = [];
@@ -54,7 +55,7 @@ const RainEffect = () => {
     return drops;
   };
 
-  const raindrops = createRaindrops(100);
+  //const raindrops = createRaindrops(100);
   return (
     <div
       ref={containerRef}
