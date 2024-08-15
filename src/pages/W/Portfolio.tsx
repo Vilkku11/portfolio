@@ -31,8 +31,7 @@ const Portfolio = () => {
       </div>
       <Header />
       <div className="content">
-        <h1>Welcome!</h1>
-        <h1>Hey There!</h1>
+        <h1 className="gray-box">Hey There!</h1>
         <h1>I'm adjective innovator</h1>
         <h1>with a passion for technology</h1>
         <p>Hey there! You found over here!</p>
