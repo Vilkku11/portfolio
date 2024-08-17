@@ -9,19 +9,21 @@ import ParagraphWords from "./components/paragraph/ParagraphWords";
 import SlotText from "./components/slotText/SlotText";
 import Section from "./components/section/Section";
 
+import { SlotTextItem } from "./components/slotText/SlotText";
+
 import "./Portfolio.css";
 
 const Portfolio = () => {
   const stickyElement = useRef<HTMLHeadingElement | null>(null);
 
   // "I'm a [adjective] innovator with a passion for technology."
-  const slotTextWords: string[] = [
-    "Driven",
-    "Fueled",
-    "Inspired",
-    "Ambitious",
-    "Motivated",
-    "Determined",
+  const slotTextWords: SlotTextItem[] = [
+    { text: "Driven", color: "#FF5733" },
+    { text: "Fueled", color: "#3312D3" },
+    { text: "Inspired", color: "#12D333" },
+    { text: "Ambitious", color: "#D32212" },
+    { text: "Motivated", color: "#FF5729" },
+    { text: "Determined", color: "#FF5533" },
   ];
 
   return (
@@ -32,8 +34,11 @@ const Portfolio = () => {
       <Header />
       <div className="content">
         <h1 className="gray-box">Hey There!</h1>
-        <h1>I'm adjective innovator</h1>
-        <h1>with a passion for technology</h1>
+        <h1 className="gray-box">
+          <span className="block-text">I'm</span>
+          <SlotText words={slotTextWords} /> innovator with a passion for
+          technology
+        </h1>
         <p>Hey there! You found over here!</p>
         <h2>
           As a software engineer, I'm <SlotText words={slotTextWords} /> to
