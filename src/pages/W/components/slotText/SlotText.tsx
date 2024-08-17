@@ -2,7 +2,12 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./SlotText.css";
 
-const SlotText = ({ words }: { words: string[] }) => {
+export type SlotTextItem = {
+  text: string;
+  color: string;
+};
+
+const SlotText = ({ words }: { words: SlotTextItem[] }) => {
   //const words: string[] = ["test1", "test2", "test3", "test4"];
   const [currentWord, setCurrentWord] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(true);
@@ -42,19 +47,23 @@ const SlotText = ({ words }: { words: string[] }) => {
     <div className="slot-text">
       <AnimatePresence mode="wait">
         <motion.span
-          key={words[currentWord]}
-          initial={{ opacity: 0, y: 20, width: 90 }}
-          animate={{ opacity: 1, y: 0, width: "auto" }}
-          exit={{ opacity: 0, y: -20, width: 90 }}
+          key={words[currentWord].text}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
           layout
           style={{
             display: "inline-block",
             marginRight: "10px",
             marginLeft: "10px",
+            backgroundColor: words[currentWord].color,
           }}
         >
-          {words[currentWord]}
+          {words[currentWord].text}
         </motion.span>
       </AnimatePresence>{" "}
     </div>
