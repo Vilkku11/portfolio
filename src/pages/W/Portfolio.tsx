@@ -33,13 +33,12 @@ const Portfolio = () => {
       </div>
       <Header />
       <div className="content">
-        <h1 className="gray-box">Hey There!</h1>
         <h1 className="gray-box">
+          <span className="header-gray-box gray-box">Hey There!</span>
           <span className="block-text">I'm</span>
           <SlotText words={slotTextWords} /> innovator with a passion for
           technology
         </h1>
-        <p>Hey there! You found over here!</p>
         <h2>
           As a software engineer, I'm <SlotText words={slotTextWords} /> to
           continuously learn and adapt to new technologies. My enthusiasm for
