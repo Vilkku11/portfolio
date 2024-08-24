@@ -1,10 +1,13 @@
-const Home = () => {
-  const headingStyle = {
-    color: "black",
-    fontSize: "2vw",
-    textAlign: "center" as const,
-  };
+import "./Home.css";
 
-  return <h1 style={headingStyle}>is this home??</h1>;
+const Home = () => {
+  return (
+    <div className="container">
+      <h1 className="home-header">is this home??</h1>
+      <a className="home-link" href="/w">
+        Click me
+      </a>
+    </div>
+  );
 };
 export default Home;
