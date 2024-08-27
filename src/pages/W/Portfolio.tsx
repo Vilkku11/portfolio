@@ -40,8 +40,8 @@ const Portfolio = () => {
           technology
         </h1>
         <h2>
-          As a software engineer, I'm <SlotText words={slotTextWords} /> to
-          continuously learn and adapt to new technologies. My enthusiasm for
+          As a software engineer, I'm <SlotText words={slotTextWords} />
+          to continuously learn and adapt to new technologies. My enthusiasm for
           problem-solving fuels my desire to stay ahead of the curve, whether
           it's mastering a new programming language or finding innovative
           solutions to complex challenges. This commitment to growth and
