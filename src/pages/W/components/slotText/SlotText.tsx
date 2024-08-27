@@ -59,8 +59,8 @@ const SlotText = ({ words }: { words: SlotTextItem[] }) => {
           style={{
             display: "inline-block",
             marginRight: "10px",
-            marginLeft: "10px",
-            backgroundColor: words[currentWord].color,
+            //marginLeft: "10px",
+            //backgroundColor: words[currentWord].color,
           }}
         >
           {words[currentWord].text}
