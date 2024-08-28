@@ -11,6 +11,8 @@ import Section from "./components/section/Section";
 
 import { SlotTextItem } from "./components/slotText/SlotText";
 
+import Footer from "./components/footer/Footer";
+
 import "./Portfolio.css";
 
 const Portfolio = () => {
@@ -37,7 +39,7 @@ const Portfolio = () => {
           <span className="header-gray-box gray-box">Hey There!</span>
           <span className="block-text">I'm</span>
           <SlotText words={slotTextWords} /> innovator with a passion for
-          technology
+          technology.
         </h1>
         <h2>
           As a software engineer, I'm <SlotText words={slotTextWords} />
@@ -48,7 +50,16 @@ const Portfolio = () => {
           excellence is at the core of everything I do, and I strive to bring
           this same energy and curiosity to every project I undertake.
         </h2>
+        <div className="first-paragraph">
+          <ParagraphWords
+            text="As a software engineer, I'm passionate to continuously learn and adapt to new technologies. My enthusiasm for problem-solving fuels my desire to stay ahead of the curve, whether it's mastering a new programming language or finding innovative
+          solutions to complex challenges. This commitment to growth and
+          excellence is at the core of everything I do, and I strive to bring
+          this same energy and curiosity to every project I undertake."
+          />
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };
