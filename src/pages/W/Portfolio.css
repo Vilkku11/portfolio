@@ -51,3 +51,8 @@ h1 {
 h2 {
   background-color: blue;
 }
+
+.first-paragraph {
+  max-width: 100%;
+  text-align: center;
+}

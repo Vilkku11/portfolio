@@ -15,7 +15,8 @@ const ParagraphWords = ({ text }: { text: string }) => {
     target: element,
     offset: ["start 0.9", "start 0.5"],
   });
-  const words: string[] = text.split(" ");
+  const words: string[] = text.trim().split(/\s+/);
+  console.log(words);
 
   return (
     <div>
