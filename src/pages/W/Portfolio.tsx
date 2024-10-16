@@ -8,6 +8,7 @@ import RainEffect from "./components/rain/RainEffect";
 import ParagraphWords from "./components/paragraph/ParagraphWords";
 import SlotText from "./components/slotText/SlotText";
 import Section from "./components/section/Section";
+import Projects from "./components/projects/Projects";
 
 import { SlotTextItem } from "./components/slotText/SlotText";
 
@@ -59,6 +60,7 @@ const Portfolio = () => {
           />
         </div>
       </div>
+      <Projects />
       <Footer />
     </div>
   );
