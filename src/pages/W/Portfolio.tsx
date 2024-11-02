@@ -59,6 +59,7 @@ const Portfolio = () => {
           this same energy and curiosity to every project I undertake."
           />
         </div>
+        <h1>Projects</h1>
       </div>
       <Projects />
       <Footer />
