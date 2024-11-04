@@ -8,10 +8,10 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "test 1",
+    title: "",
     description: "This is a small scale description...",
     src: "picture",
-    link: "link to github project",
+    link: "https://github.com/Vilkku11/netspeed",
     color: "#977F6D",
   },
   {
