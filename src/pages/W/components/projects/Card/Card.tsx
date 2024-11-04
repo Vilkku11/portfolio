@@ -1,5 +1,6 @@
 import { motion, useTransform } from "framer-motion";
 import { Project } from "../../../Data";
+import ProjectLink from "../../projectLink/ProjectLink";
 import "./Card.css";
 
 const Card = ({
@@ -28,6 +29,7 @@ const Card = ({
         className="project-card-style"
       >
         <h1>{project.title}</h1>
+        <ProjectLink url={project.link} />
         <p>{project.description}</p>
         <p>{project.link}</p>
       </motion.div>
