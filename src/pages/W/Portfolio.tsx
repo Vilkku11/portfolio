@@ -1,6 +1,5 @@
 import { useRef } from "react";
 
-import Curve from "./components/curve/Curve";
 import Cursor from "./components/cursor/Cursor";
 import Header from "./components/header/Header";
 import RainEffect from "./components/rain/RainEffect";
@@ -31,11 +30,12 @@ const Portfolio = () => {
 
   return (
     <div className="wrapper">
+      <Cursor stickyElement={stickyElement} />
       <div className="background">
         <RainEffect />
       </div>
       <Header />
-      <div className="content">
+      <div ref={stickyElement} className="content">
         <h1 className="gray-box">
           <span className="header-gray-box gray-box">Hey There!</span>
           <span className="block-text">I'm</span>
