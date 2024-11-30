@@ -9,16 +9,17 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "",
-    description: "This is a small scale description...",
+    description: "This is a simple test description",
     src: "picture",
     link: "https://github.com/Vilkku11/netspeed",
     color: "#977F6D",
   },
   {
-    title: "test 2",
-    description: "this is the second item",
+    title: "Autoclicker",
+    description:
+      "A cross-platform autoclicker built using the Tauri framework, offering advanced automation features such as customizable clicking, key holding, and precise mouse movement.",
     src: "secondpicture",
-    link: "link to project",
+    link: "https://github.com/Vilkku11/autoclicker",
     color: "#978F6D",
   },
   {
