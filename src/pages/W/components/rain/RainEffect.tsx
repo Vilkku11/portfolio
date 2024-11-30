@@ -63,6 +63,7 @@ const RainEffect = () => {
       style={rainContainerStyle}
     >
       {raindrops}
+      <div className="filter-layer"></div>
     </div>
   );
 };
