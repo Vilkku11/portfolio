@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import Curve from "../curve/Curve";
 import "./Footer.css";
 
