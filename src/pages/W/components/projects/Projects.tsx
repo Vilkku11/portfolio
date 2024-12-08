@@ -14,7 +14,7 @@ const Projects = () => {
   const itemRange: number = 1 / projects.length;
 
   return (
-    <div ref={container} className="projects-container">
+    <div ref={container} className="projects-container" id="projects">
       {projects.map((project: Project, index: number) => {
         const targetScale: number = 1 - (projects.length - index) * 0.05;
         return (
