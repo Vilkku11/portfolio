@@ -35,7 +35,7 @@ const Portfolio = () => {
         <RainEffect />
       </div>
       <Header />
-      <div ref={stickyElement} className="content">
+      <div ref={stickyElement} className="content" id="init">
         <h1 className="gray-box">
           <span className="header-gray-box gray-box">Hey There!</span>
           <span className="block-text">I'm</span>
