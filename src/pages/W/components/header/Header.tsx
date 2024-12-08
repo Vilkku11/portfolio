@@ -7,7 +7,19 @@ type HeaderLink = {
   href: string;
 };
 
+const HeaderLinks: HeaderLink[] = [
+  { name: "About me", href: "#init" },
+  { name: "Projects", href: "#projects" },
+  { name: "End", href: "#end" },
+] as const;
+
 const Header = () => {
+  const [activeSection, setActiveSection] = useState<string>("About me");
+
+  const changeSection = (name: string) => {
+    setActiveSection(name);
+  };
+
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
@@ -32,11 +44,6 @@ const Header = () => {
     });
   };
 
-  const HeaderLinks: HeaderLink[] = [
-    { name: "Start", href: "#init" },
-    { name: "Overview", href: "#sdf" },
-  ];
-
   return (
     <motion.header
       className="header"
@@ -50,8 +57,25 @@ const Header = () => {
         <ul className="nav-list">
           {HeaderLinks.map((link) => (
             <li key={link.name}>
-              <a className="nav-item" href={link.href}>
+              <a
+                className={
+                  activeSection === link.name ? "nav-item-active" : "nav-item"
+                }
+                href={link.href}
+                onClick={() => changeSection(link.name)}
+              >
                 {link.name}
+                {link.name === activeSection && (
+                  <motion.span
+                    className="nav-item-active-background"
+                    layoutId="activeSection"
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 15,
+                    }}
+                  ></motion.span>
+                )}
               </a>
             </li>
           ))}
