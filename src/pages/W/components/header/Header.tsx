@@ -1,23 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { SectionLink, SectionLinks } from "../../Data";
+import { useActiveSectionStore } from "../../../../store/store";
 import "./Header.css";
 
-type HeaderLink = {
-  name: string;
-  href: string;
-};
-
-const HeaderLinks: HeaderLink[] = [
-  { name: "About me", href: "#init" },
-  { name: "Projects", href: "#projects" },
-  { name: "End", href: "#end" },
-] as const;
-
 const Header = () => {
-  const [activeSection, setActiveSection] = useState<string>("About me");
+  const { activeSection, setActiveSection } = useActiveSectionStore();
 
-  const changeSection = (name: string) => {
-    setActiveSection(name);
+  const changeSection = (section: SectionLink) => {
+    setActiveSection(section);
   };
 
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -55,17 +46,19 @@ const Header = () => {
     >
       <nav className="nav">
         <ul className="nav-list">
-          {HeaderLinks.map((link) => (
+          {SectionLinks.map((link) => (
             <li key={link.name}>
               <a
                 className={
-                  activeSection === link.name ? "nav-item-active" : "nav-item"
+                  activeSection.name === link.name
+                    ? "nav-item-active"
+                    : "nav-item"
                 }
                 href={link.href}
-                onClick={() => changeSection(link.name)}
+                onClick={() => changeSection(link)}
               >
                 {link.name}
-                {link.name === activeSection && (
+                {link.name === activeSection.name && (
                   <motion.span
                     className="nav-item-active-background"
                     layoutId="activeSection"
