@@ -6,6 +6,11 @@ export type Project = {
   color: string;
 };
 
+export type SectionLink = {
+  name: string;
+  href: string;
+};
+
 export const projects: Project[] = [
   {
     title: "",
@@ -29,4 +34,10 @@ export const projects: Project[] = [
     link: "Link to project",
     color: " #3842d9",
   },
-];
+] as const;
+
+export const SectionLinks: SectionLink[] = [
+  { name: "About me", href: "#init" },
+  { name: "Projects", href: "#projects" },
+  { name: "End", href: "#end" },
+] as const;
