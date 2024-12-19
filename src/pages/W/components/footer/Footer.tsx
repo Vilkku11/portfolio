@@ -1,8 +1,22 @@
+import { useEffect } from "react";
 import { Link } from "react-router";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionStore } from "../../../../store/store";
 import Curve from "../curve/Curve";
+import SectionObserver from "../sectionObserver/SectionObserver";
 import "./Footer.css";
 
 const Footer = () => {
+  /*const { setActiveSection } = useActiveSectionStore();
+
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("End");
+    }
+  }, [inView]);*/
+
   return (
     <div className="footer" id="end">
       <Curve />
@@ -11,6 +25,7 @@ const Footer = () => {
       <p>papaspapd</p>
       <Link to="/">Back to main</Link>
       <Link to="/attributions">Credits & Attributions</Link>
+      <SectionObserver sectionName="End" />
     </div>
   );
 };

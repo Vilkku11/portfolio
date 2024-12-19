@@ -8,6 +8,7 @@ import ParagraphWords from "./components/paragraph/ParagraphWords";
 import SlotText from "./components/slotText/SlotText";
 import Section from "./components/section/Section";
 import Projects from "./components/projects/Projects";
+import SectionObserver from "./components/sectionObserver/SectionObserver";
 
 import { SlotTextItem } from "./components/slotText/SlotText";
 
@@ -60,6 +61,7 @@ const Portfolio = () => {
           />
         </div>
         <h1>Projects</h1>
+        <SectionObserver sectionName="About me" />
       </div>
       <Projects />
       <Footer />
