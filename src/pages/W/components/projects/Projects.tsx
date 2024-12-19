@@ -1,7 +1,9 @@
 import { useRef } from "react";
 import { motion, MotionValue, useScroll } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Card from "./Card/Card";
-import { projects, Project } from "../../Data";
+import SectionObserver from "../sectionObserver/SectionObserver";
+import { projects, Project, SectionLink } from "../../Data";
 import "./Projects.css";
 
 const Projects = () => {
@@ -28,6 +30,7 @@ const Projects = () => {
           />
         );
       })}
+      <SectionObserver sectionName="Projects" />
     </div>
   );
 };

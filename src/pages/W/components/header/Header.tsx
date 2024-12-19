@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { SectionLink, SectionLinks } from "../../Data";
+import { SectionLinks } from "../../Data";
 import { useActiveSectionStore } from "../../../../store/store";
 import "./Header.css";
 
 const Header = () => {
   const { activeSection, setActiveSection } = useActiveSectionStore();
 
-  const changeSection = (section: SectionLink) => {
+  const changeSection = (section: string) => {
     setActiveSection(section);
   };
 
@@ -50,15 +50,13 @@ const Header = () => {
             <li key={link.name}>
               <a
                 className={
-                  activeSection.name === link.name
-                    ? "nav-item-active"
-                    : "nav-item"
+                  activeSection === link.name ? "nav-item-active" : "nav-item"
                 }
                 href={link.href}
-                onClick={() => changeSection(link)}
+                onClick={() => changeSection(link.name)}
               >
                 {link.name}
-                {link.name === activeSection.name && (
+                {link.name === activeSection && (
                   <motion.span
                     className="nav-item-active-background"
                     layoutId="activeSection"

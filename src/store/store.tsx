@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { SectionLink } from "../pages/W/Data";
+//import type { SectionLink } from "../pages/W/Data";
 import { SectionLinks } from "../pages/W/Data";
 
 type VariantStore = {
@@ -8,8 +8,8 @@ type VariantStore = {
 };
 
 type ActiveSectionStore = {
-  activeSection: SectionLink;
-  setActiveSection: (section: SectionLink) => void;
+  activeSection: string;
+  setActiveSection: (section: string) => void;
 };
 
 export const useVariantStore = create<VariantStore>((set) => ({
@@ -20,6 +20,6 @@ export const useVariantStore = create<VariantStore>((set) => ({
 }));
 
 export const useActiveSectionStore = create<ActiveSectionStore>((set) => ({
-  activeSection: SectionLinks[0],
-  setActiveSection: (section: SectionLink) => set({ activeSection: section }),
+  activeSection: SectionLinks[0].name,
+  setActiveSection: (section: string) => set({ activeSection: section }),
 }));
