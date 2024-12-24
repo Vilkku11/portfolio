@@ -62,8 +62,8 @@ const Header = () => {
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
-                      stiffness: 300,
-                      damping: 15,
+                      stiffness: 100, //300
+                      damping: 10,
                     }}
                   ></motion.span>
                 )}
