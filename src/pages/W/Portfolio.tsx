@@ -31,7 +31,6 @@ const Portfolio = () => {
 
   return (
     <div className="wrapper">
-      <Cursor stickyElement={stickyElement} />
       <div className="background">
         <RainEffect />
       </div>
