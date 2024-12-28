@@ -1,7 +1,7 @@
 export type Project = {
   title: string;
   description: string;
-  src: string;
+  image: string;
   link: string;
   color: string;
 };
@@ -13,26 +13,33 @@ export type SectionLink = {
 
 export const projects: Project[] = [
   {
-    title: "",
+    title: "test title",
     description: "This is a simple test description",
-    src: "picture",
+    image: "picture",
     link: "https://github.com/Vilkku11/netspeed",
-    color: "#977F6D",
+    color: "586F7C", //"#D3D3D3",
   },
   {
     title: "Autoclicker",
     description:
       "A cross-platform autoclicker built using the Tauri framework, offering advanced automation features such as customizable clicking, key holding, and precise mouse movement.",
-    src: "secondpicture",
+    image: "secondpicture",
     link: "https://github.com/Vilkku11/autoclicker",
-    color: "#978F6D",
+    color: "B8DBD9", //"#A9A9A9",
   },
   {
-    title: "test 3",
+    title: "Netspeed",
     description: "This is the third iteem!",
-    src: "thirdPicture",
-    link: "Link to project",
-    color: " #3842d9",
+    image: "/src/assets/netspeed.webp",
+    link: "https://github.com/Vilkku11/netspeed",
+    color: "F4F4F9 ", //" #708090",
+  },
+  {
+    title: "Forest Haven Resort",
+    description: "Project done in collaboration with IB students",
+    image: "/src/assets/foresthaven.webp",
+    link: "https://github.com/timosiu/Software-Project2023",
+    color: "04724D", //"#36454F",
   },
 ] as const;
 

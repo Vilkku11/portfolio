@@ -12,7 +12,37 @@
 .project-card-style {
   position: relative;
   top: -10%;
-  height: 400px;
+  height: 30rem;
   width: 100%;
+  border-style: dashed;
+  border-width: 1px;
   border-radius: 1rem;
+  border-color: white;
+}
+
+.content-divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.project-header {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 450px; /*1024px */
+  height: auto;
+  flex-shrink: 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
 }
