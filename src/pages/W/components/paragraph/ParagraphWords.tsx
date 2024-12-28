@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useScroll, motion, useTransform } from "framer-motion";
+import { useScroll, motion, useTransform, MotionValue } from "framer-motion";
 import "./Paragraph.css";
 
 type SingleWord = {
@@ -11,16 +11,17 @@ type SingleWord = {
 const ParagraphWords = ({ text }: { text: string }) => {
   const element = useRef<HTMLHeadingElement | null>(null);
 
-  const { scrollYProgress }: { scrollYProgress: any } = useScroll({
-    target: element,
-    offset: ["start 0.9", "start 0.5"],
-  });
+  const { scrollYProgress }: { scrollYProgress: MotionValue<number> } =
+    useScroll({
+      target: element,
+      offset: ["start 0.9", "start 0.5"],
+    });
   const words: string[] = text.trim().split(/\s+/);
   console.log(words);
 
   return (
     <div>
-      <p
+      <motion.p
         ref={element}
         className="paragraph-text"
         style={{ opacity: scrollYProgress }}
@@ -37,7 +38,7 @@ const ParagraphWords = ({ text }: { text: string }) => {
 
           return <Word key={i} {...singleWord}></Word>;
         })}
-      </p>
+      </motion.p>
     </div>
   );
 };
