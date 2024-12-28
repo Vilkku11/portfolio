@@ -6,7 +6,6 @@ import RainEffect from "./components/rain/RainEffect";
 
 import ParagraphWords from "./components/paragraph/ParagraphWords";
 import SlotText from "./components/slotText/SlotText";
-import Section from "./components/section/Section";
 import Projects from "./components/projects/Projects";
 import SectionObserver from "./components/sectionObserver/SectionObserver";
 

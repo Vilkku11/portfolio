@@ -8,10 +8,11 @@ import "./Projects.css";
 
 const Projects = () => {
   const container = useRef<null | HTMLDivElement>(null);
-  const { scrollYProgress }: { scrollYProgress: any } = useScroll({
-    target: container,
-    offset: ["start start", "end end"],
-  });
+  const { scrollYProgress }: { scrollYProgress: MotionValue<number> } =
+    useScroll({
+      target: container,
+      offset: ["start start", "end end"],
+    });
 
   const itemRange: number = 1 / projects.length;
 
