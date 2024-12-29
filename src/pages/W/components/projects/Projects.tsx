@@ -1,9 +1,8 @@
 import { useRef } from "react";
-import { motion, MotionValue, useScroll } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { MotionValue, useScroll } from "framer-motion";
 import Card from "./Card/Card";
 import SectionObserver from "../sectionObserver/SectionObserver";
-import { projects, Project, SectionLink } from "../../Data";
+import { projects, Project } from "../../Data";
 import "./Projects.css";
 
 const Projects = () => {

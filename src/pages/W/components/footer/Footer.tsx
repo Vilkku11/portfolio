@@ -1,7 +1,4 @@
-import { useEffect } from "react";
 import { Link } from "react-router";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionStore } from "../../../../store/store";
 import Curve from "../curve/Curve";
 import SectionObserver from "../sectionObserver/SectionObserver";
 import "./Footer.css";

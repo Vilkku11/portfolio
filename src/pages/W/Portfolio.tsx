@@ -1,6 +1,5 @@
 import { useRef } from "react";
 
-import Cursor from "./components/cursor/Cursor";
 import Header from "./components/header/Header";
 import RainEffect from "./components/rain/RainEffect";
 
