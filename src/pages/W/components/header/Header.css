@@ -1,20 +1,14 @@
 .header {
   position: fixed;
-  top: 0;
-  left: 60%;
+  top: 0%;
+  right: 10%;
   transform: translateX(0%);
-  width: 40%;
 
-  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1rem);
   z-index: 9999;
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  border-color: #f0f0f0;
-  border-style: none;
-  border-width: 1px;
-  border-radius: 0px;
-  box-sizing: border-box;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
 }
 
 .nav {
@@ -61,11 +55,11 @@
 .nav-item-active-background {
   border-radius: 0%;
   position: absolute;
-  top: 0;
+  top: 95%;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: gray;
+  background-color: white;
   pointer-events: none;
   z-index: -1;
 }
@@ -75,10 +69,24 @@
     width: 100%;
     left: 0;
   }
-  .nav-item {
+  .nav-item .nav-item-active {
     font-size: 1rem;
   }
-  .nav-item-active {
-    font-size: 1rem;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .header {
+    white-space: nowrap;
+    /*left: 40%;*/
+    right: 0%;
+  }
+  .nav-item .nav-item-active {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .header {
+    right: 0;
   }
 }
