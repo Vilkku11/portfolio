@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, JSX } from "react";
 import "./RainEffect.css";
 
 const RainEffect = () => {

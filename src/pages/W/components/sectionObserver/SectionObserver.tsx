@@ -4,11 +4,19 @@ import { useActiveSectionStore } from "../../../../store/store";
 import "./SectionObserver.css";
 
 // Observes a section's visibility and updates it to the store
-const SectionObserver = ({ sectionName }: { sectionName: string }) => {
+const SectionObserver = ({
+  sectionName,
+  threshold = 0,
+  rootMargin = "",
+}: {
+  sectionName: string;
+  threshold: number;
+  rootMargin: string;
+}) => {
   const { setActiveSection } = useActiveSectionStore();
 
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    //threshold: 0.3,
     //rootMargin: "0px 0px -5% 0px",
   });
 
