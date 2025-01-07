@@ -1,12 +1,10 @@
 import { useRef } from "react";
 
-import Cursor from "./components/cursor/Cursor";
 import Header from "./components/header/Header";
 import RainEffect from "./components/rain/RainEffect";
 
 import ParagraphWords from "./components/paragraph/ParagraphWords";
 import SlotText from "./components/slotText/SlotText";
-import Section from "./components/section/Section";
 import Projects from "./components/projects/Projects";
 import SectionObserver from "./components/sectionObserver/SectionObserver";
 
@@ -31,7 +29,6 @@ const Portfolio = () => {
 
   return (
     <div className="wrapper">
-      <Cursor stickyElement={stickyElement} />
       <div className="background">
         <RainEffect />
       </div>

@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: "Autoclicker",
     description:
       "A cross-platform autoclicker built using the Tauri framework, offering advanced automation features such as customizable clicking, key holding, and precise mouse movement.",
-    image: "secondpicture",
+    image: "/src/assets/autoclicker.webp",
     link: "https://github.com/Vilkku11/autoclicker",
     color: "B8DBD9", //"#A9A9A9",
   },

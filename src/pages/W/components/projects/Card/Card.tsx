@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, MotionValue } from "framer-motion";
 import { Project } from "../../../Data";
 import ProjectLink from "../../projectLink/ProjectLink";
 import "./Card.css";
@@ -19,12 +19,21 @@ const Card = ({
 }) => {
   const container = useRef<null | HTMLDivElement>(null);
 
-  const { scrollYProgress }: { scrollYProgress: any } = useScroll({
-    target: container,
-    offset: ["start end", "start start"],
-  });
-  const cardScale: any = useTransform(progress, range, [1, targetScale]);
-  const imageScale: any = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
+  const { scrollYProgress }: { scrollYProgress: MotionValue<number> } =
+    useScroll({
+      target: container,
+      offset: ["start end", "start start"],
+    });
+
+  const cardScale: MotionValue = useTransform(progress, range, [
+    1,
+    targetScale,
+  ]);
+  const imageScale: MotionValue = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [1.2, 1]
+  );
 
   return (
     <div ref={container} className="project-card-container">
