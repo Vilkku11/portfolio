@@ -1,17 +1,17 @@
 import { useRef } from "react";
-import { motion, MotionValue, useScroll } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { MotionValue, useScroll } from "framer-motion";
 import Card from "./Card/Card";
 import SectionObserver from "../sectionObserver/SectionObserver";
-import { projects, Project, SectionLink } from "../../Data";
+import { projects, Project } from "../../Data";
 import "./Projects.css";
 
 const Projects = () => {
   const container = useRef<null | HTMLDivElement>(null);
-  const { scrollYProgress }: { scrollYProgress: any } = useScroll({
-    target: container,
-    offset: ["start start", "end end"],
-  });
+  const { scrollYProgress }: { scrollYProgress: MotionValue<number> } =
+    useScroll({
+      target: container,
+      offset: ["start start", "end end"],
+    });
 
   const itemRange: number = 1 / projects.length;
 
