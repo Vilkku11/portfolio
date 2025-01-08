@@ -10,8 +10,8 @@ const SectionObserver = ({
   rootMargin = "",
 }: {
   sectionName: string;
-  threshold: number;
-  rootMargin: string;
+  threshold?: number;
+  rootMargin?: string;
 }) => {
   const { setActiveSection } = useActiveSectionStore();
 
