@@ -17,15 +17,14 @@ import "./Portfolio.css";
 const Portfolio = () => {
   const stickyElement = useRef<HTMLHeadingElement | null>(null);
 
-  // "I'm a [adjective] innovator with a passion for technology."
-  const slotTextWords: SlotTextItem[] = [
+  /* const slotTextWords: SlotTextItem[] = [
     { text: "Driven", color: "#FF5733" },
     { text: "Fueled", color: "#3312D3" },
     { text: "Inspired", color: "#12D333" },
     { text: "Ambitious", color: "#D32212" },
     { text: "Motivated", color: "#FF5729" },
     { text: "Determined", color: "#FF5533" },
-  ];
+  ];*/
 
   return (
     <div className="wrapper">
@@ -33,9 +32,11 @@ const Portfolio = () => {
         <RainEffect />
       </div>
       <Header />
-      <div ref={stickyElement} className="content" id="init">
+      <div ref={stickyElement} className="start-content" id="init">
         <h1>Hey There!</h1>
-        <p>Last year SWE student ready to tackle new challenges</p>
+        <p className="start-content-text">
+          Last year SWE student ready to tackle new challenges
+        </p>
         <SectionObserver sectionName="About me" />
       </div>
       <Projects />
