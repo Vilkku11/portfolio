@@ -52,16 +52,16 @@
   -webkit-background-clip: text;
 }
 
-.nav-item-active-background {
-  border-radius: 0%;
+.nav-item-background {
+  border-radius: 4px;
   position: absolute;
-  top: 95%;
+  height: 2px;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: white;
-  pointer-events: none;
   z-index: -1;
+  pointer-events: none;
 }
 
 @media (max-width: 575px) {

@@ -18,7 +18,7 @@ html {
   height: 100vh;
 }
 
-.content {
+.start-content {
   position: relative;
   color: white;
   display: flex;
@@ -29,6 +29,10 @@ html {
   padding: 0% 10%;
   font-family: monospace;
   min-height: 100vh;
+}
+
+.start-content-text {
+  font-size: 1rem;
 }
 
 .header-gray-box {

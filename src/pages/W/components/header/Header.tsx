@@ -58,7 +58,7 @@ const Header = () => {
                 {link.name}
                 {link.name === activeSection && (
                   <motion.span
-                    className="nav-item-active-background"
+                    className="nav-item-background"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
