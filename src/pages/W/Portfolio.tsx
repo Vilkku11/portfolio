@@ -8,7 +8,7 @@ import SlotText from "./components/slotText/SlotText";
 import Projects from "./components/projects/Projects";
 import SectionObserver from "./components/sectionObserver/SectionObserver";
 
-import { SlotTextItem } from "./components/slotText/SlotText";
+import { dynamicWords } from "./Data";
 
 import Footer from "./components/footer/Footer";
 
@@ -16,15 +16,6 @@ import "./Portfolio.css";
 
 const Portfolio = () => {
   const stickyElement = useRef<HTMLHeadingElement | null>(null);
-
-  /* const slotTextWords: SlotTextItem[] = [
-    { text: "Driven", color: "#FF5733" },
-    { text: "Fueled", color: "#3312D3" },
-    { text: "Inspired", color: "#12D333" },
-    { text: "Ambitious", color: "#D32212" },
-    { text: "Motivated", color: "#FF5729" },
-    { text: "Determined", color: "#FF5533" },
-  ];*/
 
   return (
     <div className="wrapper">
@@ -34,9 +25,11 @@ const Portfolio = () => {
       <Header />
       <div ref={stickyElement} className="start-content" id="init">
         <h1>Hey There!</h1>
-        <p className="start-content-text">
-          Last year SWE student ready to tackle new challenges
-        </p>
+        <span className="start-content-text">
+          Soon graduating software engineering student from Tampere University
+          of Applied Sciences, driven by <SlotText words={dynamicWords} /> and
+          eager to make an impact.
+        </span>
         <SectionObserver sectionName="About me" />
       </div>
       <Projects />

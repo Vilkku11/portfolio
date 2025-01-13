@@ -1,3 +1,8 @@
+export type DynamicWords = {
+  word: string;
+  len: number;
+};
+
 export type Project = {
   title: string;
   description: string;
@@ -10,6 +15,19 @@ export type SectionLink = {
   name: string;
   href: string;
 };
+
+export const dynamicWords = [
+  { word: "innovation", len: 10 },
+  { word: "curiosity", len: 9 },
+  { word: "excellence", len: 10 },
+  { word: "collaboration", len: 14 },
+  { word: "creativity", len: 11 },
+  { word: "efficiency", len: 10 },
+  { word: "adaptability", len: 14 },
+  { word: "problem-solving", len: 15 },
+  { word: "dedication", len: 10 },
+  { word: "passion for learning", len: 20 },
+];
 
 export const projects: Project[] = [
   {
