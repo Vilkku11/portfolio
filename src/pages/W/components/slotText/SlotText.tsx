@@ -1,17 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { DynamicWords } from "../../Data";
 import "./SlotText.css";
 
-export type SlotTextItem = {
-  text: string;
-  color: string;
-};
-
-const SlotText = ({ words }: { words: SlotTextItem[] }) => {
+const SlotText = ({ words }: { words: DynamicWords[] }) => {
   //const words: string[] = ["test1", "test2", "test3", "test4"];
   const [currentWord, setCurrentWord] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(true);
 
+  // Handle visibility state for pausing animations.
   useEffect(() => {
     const handleVisibility = () => {
       if (document.hidden) {
@@ -28,6 +25,7 @@ const SlotText = ({ words }: { words: SlotTextItem[] }) => {
     };
   }, []);
 
+  // Update "currentWord" periodically.
   useEffect(() => {
     if (!isVisible) return;
 
@@ -38,16 +36,22 @@ const SlotText = ({ words }: { words: SlotTextItem[] }) => {
         }
         return prevIndex + 1;
       });
-    }, 2000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [isVisible]);
 
   return (
-    <div className="slot-text">
+    <span
+      className="slot-text"
+      style={{
+        width: `${words[currentWord].len + 1}ch`,
+        transition: "width 0.5s ease-in-out",
+      }}
+    >
       <AnimatePresence mode="wait">
         <motion.span
-          key={words[currentWord].text}
+          key={words[currentWord].word}
           initial={{ opacity: 0, y: 20 }}
           animate={{
             opacity: 1,
@@ -58,15 +62,14 @@ const SlotText = ({ words }: { words: SlotTextItem[] }) => {
           layout
           style={{
             display: "inline-block",
-            marginRight: "10px",
-            //marginLeft: "10px",
-            //backgroundColor: words[currentWord].color,
+            whiteSpace: "nowrap",
+            textAlign: "center",
           }}
         >
-          {words[currentWord].text}
+          {words[currentWord].word}
         </motion.span>
-      </AnimatePresence>{" "}
-    </div>
+      </AnimatePresence>
+    </span>
   );
 };
 
