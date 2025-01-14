@@ -1,5 +1,16 @@
 .projects-container {
   position: relative;
   z-index: 1;
-  scroll-margin-top: 20rem;
+  /*scroll-margin-top: 20rem;*/
+}
+
+.projects-header {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  padding-top: 2rem;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+  color: white;
 }

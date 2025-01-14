@@ -3,7 +3,6 @@ import { useRef } from "react";
 import Header from "./components/header/Header";
 import RainEffect from "./components/rain/RainEffect";
 
-import ParagraphWords from "./components/paragraph/ParagraphWords";
 import SlotText from "./components/slotText/SlotText";
 import Projects from "./components/projects/Projects";
 import SectionObserver from "./components/sectionObserver/SectionObserver";
