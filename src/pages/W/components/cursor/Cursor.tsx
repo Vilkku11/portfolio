@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import "./Cursor.css";
 
 import { useVariantStore } from "../../../../store/store";
+
+import "./Cursor.css";
 
 type Variant = {
   x: number;

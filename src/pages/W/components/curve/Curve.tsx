@@ -1,5 +1,7 @@
 import { useRef, useEffect } from "react";
+
 import "./Curve.css";
+
 const Curve = () => {
   const path = useRef<null | SVGPathElement>(null);
   let progress: number = 0;
