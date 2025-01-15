@@ -2,14 +2,12 @@ import { useRef } from "react";
 
 import Header from "./components/header/Header";
 import RainEffect from "./components/rain/RainEffect";
-
 import SlotText from "./components/slotText/SlotText";
 import Projects from "./components/projects/Projects";
 import SectionObserver from "./components/sectionObserver/SectionObserver";
+import Footer from "./components/footer/Footer";
 
 import { dynamicWords } from "./Data";
-
-import Footer from "./components/footer/Footer";
 
 import "./Portfolio.css";
 

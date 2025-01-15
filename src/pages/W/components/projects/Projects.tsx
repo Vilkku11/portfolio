@@ -1,8 +1,12 @@
 import { useRef } from "react";
 import { MotionValue, useScroll } from "framer-motion";
+
 import Card from "./Card/Card";
 import SectionObserver from "../sectionObserver/SectionObserver";
-import { projects, Project } from "../../Data";
+
+import { Project } from "../../Types";
+import { projects } from "../../Data";
+
 import "./Projects.css";
 
 const Projects = () => {

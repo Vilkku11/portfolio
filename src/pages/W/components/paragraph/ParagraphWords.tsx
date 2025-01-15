@@ -1,12 +1,9 @@
 import { useRef } from "react";
 import { useScroll, motion, useTransform, MotionValue } from "framer-motion";
-import "./Paragraph.css";
 
-type SingleWord = {
-  word: string;
-  range: [start: number, end: number];
-  progress: any;
-};
+import { SingleWord } from "../../Types";
+
+import "./Paragraph.css";
 
 const ParagraphWords = ({ text }: { text: string }) => {
   const element = useRef<HTMLHeadingElement | null>(null);

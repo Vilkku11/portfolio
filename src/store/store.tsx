@@ -1,5 +1,5 @@
 import { create } from "zustand";
-//import type { SectionLink } from "../pages/W/Data";
+
 import { SectionLinks } from "../pages/W/Data";
 
 type VariantStore = {

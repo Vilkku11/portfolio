@@ -1,13 +1,10 @@
 import { useRef, useState, useEffect, JSX } from "react";
+
+import { RainDrop } from "../../Types";
+
 import "./RainEffect.css";
 
 const RainEffect = () => {
-  type RainDrop = {
-    left: string;
-    top: string;
-    animationDelay: string;
-  };
-
   type RainContainerStyle = React.CSSProperties & {
     "--container-height": string;
   };

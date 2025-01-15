@@ -1,4 +1,5 @@
 import { FaGithub } from "react-icons/fa";
+
 import "./ProjectLink.css";
 
 const ProjectLink = ({ url }: { url: string }) => {

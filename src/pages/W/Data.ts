@@ -1,22 +1,6 @@
-export type DynamicWords = {
-  word: string;
-  len: number;
-};
+import { DynamicWords, Project, SectionLink } from "./Types";
 
-export type Project = {
-  title: string;
-  description: string;
-  image: string;
-  link: string;
-  color: string;
-};
-
-export type SectionLink = {
-  name: string;
-  href: string;
-};
-
-export const dynamicWords = [
+export const dynamicWords: DynamicWords[] = [
   { word: "innovation", len: 10 },
   { word: "curiosity", len: 9 },
   { word: "excellence", len: 10 },

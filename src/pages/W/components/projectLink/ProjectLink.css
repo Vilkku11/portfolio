@@ -5,6 +5,7 @@
   position: relative;
   text-decoration: none;
   color: inherit;
+  align-self: flex-start;
 }
 
 .github-link span {
@@ -13,10 +14,12 @@
   font-weight: 800;
   transition: font-size 0.3s ease, letter-spacing 0.3s ease;
   font-family: monospace;
+  color: rgba(255, 255, 255, 0.9);
+  transform: ;
 }
 
 .github-link:hover span {
-  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 1);
 }
 
 .github-link::after {

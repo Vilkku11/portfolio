@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router";
 
-import "./App.css";
-
 import Home from "./pages/Home";
 import Portfolio from "./pages/W/Portfolio";
 import Attributions from "./pages/attributions/Attributions";
+
+import "./App.css";
 
 function App() {
   const routes = (
