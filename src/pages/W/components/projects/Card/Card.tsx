@@ -1,7 +1,10 @@
 import { useRef } from "react";
 import { motion, useTransform, useScroll, MotionValue } from "framer-motion";
-import { Project } from "../../../Data";
+
 import ProjectLink from "../../projectLink/ProjectLink";
+
+import { Project } from "../../../Types";
+
 import "./Card.css";
 
 const Card = ({
@@ -56,9 +59,11 @@ const Card = ({
           </div>
           <div className="image-container">
             <motion.img
-              style={{
-                scale: imageScale,
-              }}
+              style={
+                {
+                  //scale: imageScale,
+                }
+              }
               className="image"
               src={project.image}
               alt=""

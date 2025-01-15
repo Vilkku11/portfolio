@@ -1,6 +1,8 @@
 import { Link } from "react-router";
+
 import Curve from "../curve/Curve";
 import SectionObserver from "../sectionObserver/SectionObserver";
+
 import "./Footer.css";
 
 const Footer = () => {

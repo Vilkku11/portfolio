@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+
 import { useActiveSectionStore } from "../../../../store/store";
+
 import "./SectionObserver.css";
 
 // Observes a section's visibility and updates it to the store

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { DynamicWords } from "../../Data";
+
+import { DynamicWords } from "../../Types";
+
 import "./SlotText.css";
 
 const SlotText = ({ words }: { words: DynamicWords[] }) => {
