@@ -1,16 +1,8 @@
 import { create } from "zustand";
 
-import { SectionLinks } from "../pages/W/Data";
+import { SectionLinks } from "../Data";
 
-type VariantStore = {
-  currentVariant: string;
-  setVariant: (variantName: string) => void;
-};
-
-type ActiveSectionStore = {
-  activeSection: string;
-  setActiveSection: (section: string) => void;
-};
+import { VariantStore, ActiveSectionStore, ImageOpenStore } from "../Types";
 
 export const useVariantStore = create<VariantStore>((set) => ({
   currentVariant: "default",
@@ -22,4 +14,15 @@ export const useVariantStore = create<VariantStore>((set) => ({
 export const useActiveSectionStore = create<ActiveSectionStore>((set) => ({
   activeSection: SectionLinks[0].name,
   setActiveSection: (section: string) => set({ activeSection: section }),
+}));
+
+export const useImageOpenStore = create<ImageOpenStore>((set) => ({
+  isOpen: false,
+  setIsOpen: (newValue: boolean): void => {
+    set({ isOpen: newValue });
+  },
+  image: "",
+  setImage: (newImage: string): void => {
+    set({ image: newImage });
+  },
 }));

@@ -57,6 +57,7 @@
   height: auto;
   margin: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .image {

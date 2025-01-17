@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { useActiveSectionStore } from "../../../../store/store";
+import { useActiveSectionStore } from "../../store/store";
 
 import "./SectionObserver.css";
 
