@@ -27,3 +27,28 @@ export type RainDrop = {
   top: string;
   animationDelay: string;
 };
+
+export type ImageViewProps = {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+  image: string;
+};
+
+// Store types
+
+export type VariantStore = {
+  currentVariant: string;
+  setVariant: (variantName: string) => void;
+};
+
+export type ActiveSectionStore = {
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+};
+
+export type ImageOpenStore = {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+  image: string;
+  setImage: (image: string) => void;
+};

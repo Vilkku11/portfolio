@@ -1,6 +1,6 @@
 .projects-container {
   position: relative;
-  z-index: 1;
+  /*z-index: 2;*/
   /*scroll-margin-top: 20rem;*/
 }
 

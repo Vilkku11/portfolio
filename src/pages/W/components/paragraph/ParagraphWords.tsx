@@ -40,7 +40,7 @@ const ParagraphWords = ({ text }: { text: string }) => {
   );
 };
 
-const Word: React.FC<SingleWord> = ({ word, range, progress }) => {
+const Word = ({ word, range, progress }: SingleWord) => {
   const opacity: any = useTransform(progress, range, [0, 1]);
   return (
     <span className="word-container">
