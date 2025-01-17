@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-import { useVariantStore } from "../../../../store/store";
+import { useVariantStore } from "../../store/store";
 
 import "./Cursor.css";
 

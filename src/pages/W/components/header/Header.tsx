@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+
 import { SectionLinks } from "../../Data";
-import { useActiveSectionStore } from "../../../../store/store";
+import { useActiveSectionStore } from "../../store/store";
+
 import "./Header.css";
 
 const Header = () => {

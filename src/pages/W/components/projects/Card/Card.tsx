@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useTransform, useScroll, MotionValue } from "framer-motion";
+import { useImageOpenStore } from "../../../store/store";
 
 import ProjectLink from "../../projectLink/ProjectLink";
 
@@ -38,6 +39,12 @@ const Card = ({
     [1.2, 1]
   );
 
+  const { setIsOpen, setImage } = useImageOpenStore();
+  const OpenImage = () => {
+    setImage(project.image);
+    setIsOpen(true);
+  };
+
   return (
     <div ref={container} className="project-card-container">
       <motion.div
@@ -57,7 +64,7 @@ const Card = ({
             <p>{project.description}</p>
             <p>{project.link}</p>
           </div>
-          <div className="image-container">
+          <div className="image-container" onClick={OpenImage}>
             <motion.img
               style={
                 {

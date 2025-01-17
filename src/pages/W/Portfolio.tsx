@@ -6,6 +6,7 @@ import SlotText from "./components/slotText/SlotText";
 import Projects from "./components/projects/Projects";
 import SectionObserver from "./components/sectionObserver/SectionObserver";
 import Footer from "./components/footer/Footer";
+import ImageView from "./components/imageview/ImageView";
 
 import { dynamicWords } from "./Data";
 
@@ -31,6 +32,7 @@ const Portfolio = () => {
       </div>
       <Projects />
       <Footer />
+      <ImageView />
     </div>
   );
 };
