@@ -36,7 +36,7 @@ const Projects = () => {
             />
           );
         })}
-        <SectionObserver sectionName="Projects" />
+        <SectionObserver sectionName="Projects" threshold={0.2} />
       </div>
     </div>
   );
