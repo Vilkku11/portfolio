@@ -54,3 +54,9 @@ h1 {
   max-width: 100%;
   text-align: center;
 }
+
+@media (max-width: 575px) {
+  .start-content-header {
+    font-size: 3rem;
+  }
+}
