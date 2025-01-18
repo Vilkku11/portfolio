@@ -15,10 +15,10 @@ export const dynamicWords: DynamicWords[] = [
 
 export const projects: Project[] = [
   {
-    title: "test title",
+    title: "Homeassistant",
     description: "This is a simple test description",
-    image: "picture",
-    link: "https://github.com/Vilkku11/netspeed",
+    image: "/src/assets/homeassistant.webp",
+    link: "https://github.com/Missing-Link-harkat/homeassistant",
     color: "586F7C", //"#D3D3D3",
   },
   {
@@ -40,6 +40,14 @@ export const projects: Project[] = [
     title: "Forest Haven Resort",
     description: "Project done in collaboration with IB students",
     image: "/src/assets/foresthaven.webp",
+    link: "https://github.com/timosiu/Software-Project2023",
+    color: "04724D", //"#36454F",
+  },
+  {
+    title: "Portfolio",
+    description:
+      "You're vieweing this project right now!!! My playground to try and extend the capapbilities of webbrowsers",
+    image: "",
     link: "https://github.com/timosiu/Software-Project2023",
     color: "04724D", //"#36454F",
   },
