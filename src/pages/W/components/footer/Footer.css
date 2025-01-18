@@ -11,3 +11,9 @@
   color: inherit;
   font-weight: bold;
 }
+
+@media (max-width: 767px) {
+  .footer h1 {
+    font-size: 3rem;
+  }
+}

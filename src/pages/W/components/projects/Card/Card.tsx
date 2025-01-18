@@ -48,9 +48,8 @@ const Card = ({
         <h1 className="project-header">{project.title}</h1>
         <div className="content-divider">
           <div className="text-container">
-            <ProjectLink url={project.link} />
             <p>{project.description}</p>
-            <p>{project.link}</p>
+            <ProjectLink url={project.link} />
           </div>
           <div className="image-container">
             <motion.img

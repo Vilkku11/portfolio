@@ -14,3 +14,15 @@
   text-align: center;
   color: white;
 }
+
+@media (max-width: 575px) {
+  .projects-header {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects-header {
+    padding-top: 4rem;
+  }
+}
