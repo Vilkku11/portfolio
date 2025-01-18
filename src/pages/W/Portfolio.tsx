@@ -22,7 +22,7 @@ const Portfolio = () => {
       </div>
       <Header />
       <div ref={stickyElement} className="start-content" id="init">
-        <h1>Hey There!</h1>
+        <h1 className="start-content-header">Hey There!</h1>
         <span className="start-content-text">
           Soon graduating software engineering student from Tampere University
           of Applied Sciences, driven by <SlotText words={dynamicWords} /> and

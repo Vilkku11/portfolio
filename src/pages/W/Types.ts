@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type DynamicWords = {
   word: string;
   len: number;
@@ -5,7 +7,7 @@ export type DynamicWords = {
 
 export type Project = {
   title: string;
-  description: string;
+  description: ReactNode;
   image: string;
   link: string;
   color: string;
