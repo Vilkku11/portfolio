@@ -22,24 +22,12 @@ const Card = ({
   progress: any;
 }) => {
   const container = useRef<null | HTMLDivElement>(null);
-
-  const { scrollYProgress }: { scrollYProgress: MotionValue<number> } =
-    useScroll({
-      target: container,
-      offset: ["start end", "start start"],
-    });
-
   const cardScale: MotionValue = useTransform(progress, range, [
     1,
     targetScale,
   ]);
-  const imageScale: MotionValue = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [1.2, 1]
-  );
-
   const { setIsOpen, setImage } = useImageOpenStore();
+
   const OpenImage = () => {
     setImage(project.image);
     setIsOpen(true);
@@ -64,16 +52,12 @@ const Card = ({
             <p>{project.description}</p>
             <p>{project.link}</p>
           </div>
-          <div className="image-container" onClick={OpenImage}>
+          <div className="image-container">
             <motion.img
-              style={
-                {
-                  //scale: imageScale,
-                }
-              }
               className="image"
               src={project.image}
               alt=""
+              onClick={OpenImage}
             />
           </div>
         </div>

@@ -18,7 +18,7 @@ const Footer = () => {
           Here.
         </a>
       </p>
-      <SectionObserver sectionName="End" />
+      <SectionObserver sectionName="End" threshold={0.5} />
     </div>
   );
 };
