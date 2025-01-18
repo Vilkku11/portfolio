@@ -28,7 +28,7 @@ const Portfolio = () => {
           of Applied Sciences, driven by <SlotText words={dynamicWords} /> and
           eager to make an impact.
         </span>
-        <SectionObserver sectionName="About me" />
+        <SectionObserver sectionName="About me" threshold={0.5} />
       </div>
       <Projects />
       <Footer />
