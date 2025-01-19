@@ -1,3 +1,7 @@
+import netspeed from "../../assets/netspeed.webp";
+import foresthaven from "../../assets/foresthaven.webp";
+import portfolio from "../../assets/portfolio.webp";
+
 import { DynamicWords, Project, SectionLink } from "./Types";
 
 export const dynamicWords: DynamicWords[] = [
@@ -41,7 +45,7 @@ export const projects: Project[] = [
         <strong>CLI11</strong> for command-line parsing.
       </>
     ),
-    image: "/src/assets/netspeed.webp",
+    image: netspeed,
     link: "https://github.com/Vilkku11/netspeed",
     color: "F4F4F9 ", //" #708090",
   },
@@ -60,7 +64,7 @@ export const projects: Project[] = [
         <strong>GitHub Actions</strong>, hosted on Render.com.
       </>
     ),
-    image: "/src/assets/foresthaven.webp",
+    image: foresthaven,
     link: "https://github.com/timosiu/Software-Project2023",
     color: "04724D", //"#36454F",
   },
@@ -73,7 +77,7 @@ export const projects: Project[] = [
         web capabilities.
       </>
     ),
-    image: "/src/assets/portfolio.webp",
+    image: portfolio,
     link: "https://github.com/Vilkku11/portfolio",
     color: "04724D", //"#36454F",
   },
