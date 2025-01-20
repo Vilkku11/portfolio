@@ -31,7 +31,7 @@ export const projects: Project[] = [
     ),
     image: homeassistant,
     link: "https://github.com/Missing-Link-harkat/homeassistant",
-    color: "586F7C", //"#D3D3D3",
+    color: "rgba(0,0,0,0.98)", //"#D3D3D3",
   },
   /*{
     title: "Autoclicker",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     ),
     image: netspeed,
     link: "https://github.com/Vilkku11/netspeed",
-    color: "F4F4F9 ", //" #708090",
+    color: "rgba(0,0,0,0.98)", //" #708090",
   },
   {
     title: "Forest Haven Resort",
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     ),
     image: foresthaven,
     link: "https://github.com/timosiu/Software-Project2023",
-    color: "04724D", //"#36454F",
+    color: "rgba(0,0,0,0.98)", //"#36454F",
   },
   {
     title: "Portfolio (this site)",
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     ),
     image: portfolio,
     link: "https://github.com/Vilkku11/portfolio",
-    color: "04724D", //"#36454F",
+    color: "rgba(0,0,0,0.98)", //"#36454F",
   },
 ] as const;
 
