@@ -36,6 +36,39 @@ export type ImageViewProps = {
   image: string;
 };
 
+// Cursor.tsx
+
+export type MixBlendMode =
+  | "normal"
+  | "multiply"
+  | "screen"
+  | "overlay"
+  | "darken"
+  | "lighten"
+  | "color-dodge"
+  | "color-burn"
+  | "hard-light"
+  | "soft-light"
+  | "difference"
+  | "exclusion"
+  | "hue"
+  | "saturation"
+  | "color"
+  | "luminosity";
+
+export type Variant = {
+  x: number;
+  y: number;
+  height: number;
+  width: number;
+  offset: number;
+  transition: {
+    duration: number;
+    ease: string;
+  };
+  mixBlendMode?: MixBlendMode;
+};
+
 // Store types
 
 export type VariantStore = {
