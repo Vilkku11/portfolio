@@ -3,47 +3,36 @@ import { motion } from "framer-motion";
 
 import { useVariantStore } from "../../store/store";
 
+import { Variant } from "../../Types";
+
 import "./Cursor.css";
-
-type Variant = {
-  x: number;
-  y: number;
-  height: number;
-  width: number;
-  offset: number;
-  transition: {
-    duration: number;
-    ease: string;
-  };
-  mixBlendMode?: MixBlendMode;
-};
-
-type MixBlendMode =
-  | "normal"
-  | "multiply"
-  | "screen"
-  | "overlay"
-  | "darken"
-  | "lighten"
-  | "color-dodge"
-  | "color-burn"
-  | "hard-light"
-  | "soft-light"
-  | "difference"
-  | "exclusion"
-  | "hue"
-  | "saturation"
-  | "color"
-  | "luminosity";
 
 const Cursor = ({ stickyElement }: { stickyElement: any }) => {
   const { currentVariant, setVariant } = useVariantStore();
+
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  const manageMouseOver = (): void => {
+    setIsHovered(true);
+    setVariant("text");
+  };
+
+  const manageMouseLeave = (): void => {
+    setIsHovered(false);
+    setVariant("default");
+  };
 
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({
     x: 0,
     y: 0,
   });
-  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  const mouseMove = (event: MouseEvent): void => {
+    setMousePosition({
+      x: event.clientX,
+      y: event.clientY,
+    });
+  };
 
   const variants: { [key: string]: Variant } = {
     default: {
@@ -69,23 +58,6 @@ const Cursor = ({ stickyElement }: { stickyElement: any }) => {
       },
       mixBlendMode: "difference",
     },
-  };
-
-  const manageMouseOver = (): void => {
-    setIsHovered(true);
-    setVariant("text");
-  };
-
-  const manageMouseLeave = (): void => {
-    setIsHovered(false);
-    setVariant("default");
-  };
-
-  const mouseMove = (event: MouseEvent): void => {
-    setMousePosition({
-      x: event.clientX,
-      y: event.clientY,
-    });
   };
 
   useEffect(() => {
