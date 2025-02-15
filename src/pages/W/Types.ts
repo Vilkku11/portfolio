@@ -30,6 +30,10 @@ export type RainDrop = {
   animationDelay: string;
 };
 
+export type RainContainerStyle = React.CSSProperties & {
+  "--container-height": string;
+};
+
 export type ImageViewProps = {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
