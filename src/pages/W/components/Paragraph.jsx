@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useScroll, motion } from "framer-motion";
-
+/*
+  Old component
+*/
 const Paragraph = ({ value }) => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
