@@ -25,7 +25,7 @@ export const projects: Project[] = [
       <>
         A detailed exploration of <strong>Home Assistant</strong> and its
         capabilities as a foundation for automation systems, conducted as part
-        of my thesis. Project contains automation install scripts for
+        of my thesis. Project contains automation install scripts for{" "}
         <strong>Home Assistant</strong> install on top of{" "}
         <strong>OpenWRT</strong>.
       </>
