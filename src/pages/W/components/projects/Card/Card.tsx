@@ -8,6 +8,10 @@ import { Project } from "../../../Types";
 
 import "./Card.css";
 
+/*
+  Specific cards of displaying projects
+*/
+
 const Card = ({
   project,
   index,

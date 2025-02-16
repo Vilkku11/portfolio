@@ -5,6 +5,10 @@ import { SingleWord } from "../../Types";
 
 import "./Paragraph.css";
 
+/*
+  Paragraph component with appearing animation when scrolled
+*/
+
 const ParagraphWords = ({ text }: { text: string }) => {
   const element = useRef<HTMLHeadingElement | null>(null);
 
