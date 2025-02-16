@@ -9,6 +9,10 @@ import { projects } from "../../Data";
 
 import "./Projects.css";
 
+/*
+  Container for project cards
+*/
+
 const Projects = () => {
   const container = useRef<null | HTMLDivElement>(null);
   const { scrollYProgress }: { scrollYProgress: MotionValue<number> } =

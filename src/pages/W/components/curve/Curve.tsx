@@ -2,6 +2,10 @@ import { useRef, useEffect } from "react";
 
 import "./Curve.css";
 
+/*
+  Interactive line component, reacts when hovered over
+*/
+
 const Curve = () => {
   const path = useRef<null | SVGPathElement>(null);
   let progress: number = 0;

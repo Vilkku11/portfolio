@@ -7,6 +7,10 @@ import { Variant } from "../../Types";
 
 import "./Cursor.css";
 
+/*
+  Custom cursor on the page, idea to invert colors when moved over items
+*/
+
 const Cursor = ({ stickyElement }: { stickyElement: any }) => {
   const { currentVariant, setVariant } = useVariantStore();
 

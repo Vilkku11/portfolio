@@ -6,6 +6,10 @@ import { useActiveSectionStore } from "../../store/store";
 
 import "./Header.css";
 
+/*
+  Dynamic header showing the section where currently in
+*/
+
 const Header = () => {
   const { activeSection, setActiveSection } = useActiveSectionStore();
 
