@@ -3,8 +3,8 @@ Resource    ../resources/common.resource
 
 
 *** Variables ***
-${IMAGE_SELECTOR}   .image-wrapper
-${IMAGE_VIEW}   .image-view-img
+${IMAGE_SELECTOR}   css:.image-wrapper
+${IMAGE_VIEW}   css:.image-view-img
 
 *** Test Cases ***
 Button Click Should Show Preview
