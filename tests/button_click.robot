@@ -1,20 +1,15 @@
 *** Settings ***
-Library  SeleniumLibrary
+Resource    ../resources/common.resource
+
 
 *** Variables ***
-${URL}  http://localhost:5173
-${IMAGE_SELECTOR}   .inner-image
+${IMAGE_SELECTOR}   .image-wrapper
 ${IMAGE_VIEW}   .image-view-img
 
 *** Test Cases ***
 Button Click Should Show Preview
-    [Teardown]  Close Browser
-    SeleniumLibrary.Open Browser    ${URL}
-    Maximize Browser Window
-    Scroll Element Into view    ${IMAGE_SELECTOR}
+    [Teardown]  Close Browser After Test
+    Open Browser To My App
+    Scroll To Element  ${IMAGE_SELECTOR}
     Click Element   ${IMAGE_SELECTOR}
     Element Should be Visible   ${IMAGE_VIEW}
-
-*** Keywords ***
-Close Browser
-    Run Keyword And Ignore Error    SeleniumLibrary.Close Browser
