@@ -66,72 +66,14 @@
   overflow: visible;
 }
 
-.image-wrapper {
+.image {
   width: 100%;
   max-width: 500px; /*1024px */
   cursor: pointer;
   position: relative;
+  border-style: dashed;
+  border-color: white;
   z-index: 1;
-}
-
-.inner-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-.image-wrapper::after,
-.image-wrapper::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  top: 50%;
-  /*left: 50%;*/
-  translate: -50% -50%;
-  padding: 0.1rem;
-  /*border-radius: 0.2rem;*/
-  background-color: white;
-  transition: background-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  animation: spin 3s linear infinite;
-  animation-play-state: paused;
-  z-index: -1;
-}
-
-.image-wrapper:hover::after,
-.image-wrapper:hover::before {
-  background-color: black;
-  animation-play-state: running;
-}
-
-.image-wrapper::after {
-  left: 75%;
-  background-image: conic-gradient(from var(--angle), transparent 70%, white);
-}
-
-.image-wrapper::before {
-  left: 25%;
-  background-image: conic-gradient(
-    from calc(var(--angle) + 180deg),
-    transparent 70%,
-    white
-  );
-}
-
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-  to {
-    --angle: 360deg;
-  }
 }
 
 @media (max-width: 575px) {
