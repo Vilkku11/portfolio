@@ -1,16 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-*** Variables ***
-${ABOUTME_SECTION_BUTTON}    xpath=//a[@href='#init']
-${ABOUTME_FRAGMENT}    id:init
-
-${PROJECTS_SECTION_BUTTON}    xpath=//a[@href='#projects']
-${PROJECTS_FRAGMENT}    id:projects
-
-${END_SECTION_BUTTON}    xpath=//a[@href='#end']
-${END_FRAGMENT}    id:end
-
 *** Keywords ***
 Click Header Button
     [Arguments]    ${button_locator}
