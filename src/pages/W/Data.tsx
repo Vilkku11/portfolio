@@ -27,7 +27,7 @@ export const projects: Project[] = [
         capabilities as a foundation for automation systems, conducted as part
         of my thesis. Project contains automation install scripts for{" "}
         <strong>Home Assistant</strong> install on top of{" "}
-        <strong>OpenWRT</strong>.
+        <strong>OpenWrt</strong>.
       </>
     ),
     image: homeassistant,
@@ -70,7 +70,7 @@ export const projects: Project[] = [
         <strong>Tailwind CSS</strong> and a <strong>Node.js</strong> back-end
         with <strong>MySQL</strong> database. Additionally, the entire service
         was deployed to production using a CI/CD pipeline set up with{" "}
-        <strong>GitHub Actions</strong>, hosted on Render.com.
+        <strong>GitHub Actions</strong>.
       </>
     ),
     image: foresthaven,
