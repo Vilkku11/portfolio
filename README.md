@@ -13,3 +13,7 @@
 ## Project link
 
 Running service can be found [here.](https://vilkku11.github.io/portfolio/)
+
+### Tests
+
+robot --outputdir test_outputs tests/
