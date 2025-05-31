@@ -64,6 +64,7 @@
   height: auto;
   margin: 0;
   overflow: visible;
+  position: relative;
 }
 
 .image {
