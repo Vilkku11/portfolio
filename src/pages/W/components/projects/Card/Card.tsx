@@ -55,9 +55,12 @@ const Card = ({
             <ProjectLink url={project.link} />
           </div>
           <div className="image-container">
-            <div className="image-wrapper" onClick={OpenImage}>
-              <img className="inner-image" src={project.image} alt=""></img>
-            </div>
+            <img
+              className="image"
+              src={project.image}
+              alt=""
+              onClick={OpenImage}
+            ></img>
           </div>
         </div>
       </motion.div>
