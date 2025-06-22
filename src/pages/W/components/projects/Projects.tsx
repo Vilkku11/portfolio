@@ -3,6 +3,7 @@ import { MotionValue, useScroll } from "framer-motion";
 
 import Card from "./Card/Card";
 import SectionObserver from "../sectionObserver/SectionObserver";
+import { useActiveSectionStore } from "../../store/store";
 
 import { Project } from "../../Types";
 import { projects } from "../../Data";
@@ -14,6 +15,7 @@ import "./Projects.css";
 */
 
 const Projects = () => {
+  const { activeSection } = useActiveSectionStore();
   const container = useRef<null | HTMLDivElement>(null);
   const { scrollYProgress }: { scrollYProgress: MotionValue<number> } =
     useScroll({
@@ -25,7 +27,13 @@ const Projects = () => {
 
   return (
     <div>
-      <h1 className="projects-header">Projects</h1>
+      <h1
+        className={`projects-header ${
+          activeSection === "Projects" ? "sticky" : "not-sticky"
+        }`}
+      >
+        Projects
+      </h1>
       <div ref={container} className="projects-container" id="projects">
         {projects.map((project: Project, index: number) => {
           const targetScale: number = 1 - (projects.length - index) * 0.05;

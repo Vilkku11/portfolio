@@ -3,7 +3,11 @@ import foresthaven from "../../assets/foresthaven.webp";
 import portfolio from "../../assets/portfolio.webp";
 import homeassistant from "../../assets/homeassistant.webp";
 
-import { DynamicWords, Project, SectionLink } from "./Types";
+import beginnerKernel from "../../assets/lfd103-a-beginner-s-guide-to-linux-kernel-development.png";
+import beginnerSecureSoftware from "../../assets/lfd121-developing-secure-software.1.png";
+import owaspTop10 from "../../assets/skf100-understanding-the-owasp-top-10-security-thre.png";
+
+import { Badge, DynamicWords, Project, SectionLink } from "./Types";
 
 export const dynamicWords: DynamicWords[] = [
   { word: "innovation", len: 10 },
@@ -92,8 +96,29 @@ export const projects: Project[] = [
   },
 ] as const;
 
-export const SectionLinks: SectionLink[] = [
+export const sectionLinks: SectionLink[] = [
   { name: "About me", href: "#init" },
   { name: "Projects", href: "#projects" },
   { name: "End", href: "#end" },
+] as const;
+
+export const badges: Badge[] = [
+  {
+    badgeImage: beginnerSecureSoftware,
+    badgeLink:
+      "https://www.credly.com/badges/c186a2e5-fc9d-4880-8006-3cdda722c7f1/public_url",
+    altText: "LFD121: Developing Secure Software",
+  },
+  {
+    badgeImage: owaspTop10,
+    badgeLink:
+      "https://www.credly.com/badges/42c92ec2-75fc-46db-af53-647b9204ac5f/public_url",
+    altText: "SKF100: Understanding the OWASP® Top 10 Security Threats",
+  },
+  {
+    badgeImage: beginnerKernel,
+    badgeLink:
+      "https://www.credly.com/badges/2d75e8b4-af93-4b45-a92b-976dc7dbefe7/public_url",
+    altText: "LFD103: A Beginner's Guide to Linux Kernel Development",
+  },
 ] as const;
