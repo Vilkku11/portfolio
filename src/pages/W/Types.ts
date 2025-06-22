@@ -60,7 +60,7 @@ export type MixBlendMode =
   | "color"
   | "luminosity";
 
-export type Variant = {
+export type CursorVariant = {
   x: number;
   y: number;
   height: number;
@@ -71,6 +71,12 @@ export type Variant = {
     ease: string;
   };
   mixBlendMode?: MixBlendMode;
+};
+
+export type Badge = {
+  badgeImage: string;
+  badgeLink: string;
+  altText: string;
 };
 
 // Store types

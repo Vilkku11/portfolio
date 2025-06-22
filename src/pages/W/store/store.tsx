@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-import { SectionLinks } from "../Data";
+import { sectionLinks } from "../Data";
 
 import { VariantStore, ActiveSectionStore, ImageOpenStore } from "../Types";
 
@@ -12,7 +12,7 @@ export const useVariantStore = create<VariantStore>((set) => ({
 }));
 
 export const useActiveSectionStore = create<ActiveSectionStore>((set) => ({
-  activeSection: SectionLinks[0].name,
+  activeSection: sectionLinks[0].name,
   setActiveSection: (section: string) => set({ activeSection: section }),
 }));
 

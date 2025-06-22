@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 import { useVariantStore } from "../../store/store";
-
-import { Variant } from "../../Types";
 
 import "./Cursor.css";
 
@@ -38,7 +36,7 @@ const Cursor = ({ stickyElement }: { stickyElement: any }) => {
     });
   };
 
-  const variants: { [key: string]: Variant } = {
+  const variants: Variants = {
     default: {
       x: mousePosition.x - 32,
       y: mousePosition.y - 32,
