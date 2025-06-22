@@ -3,14 +3,21 @@
 }
 
 .projects-header {
-  position: sticky;
-  top: 0;
   padding: 1rem;
   padding-top: 2rem;
   margin: 0;
   align-items: center;
   text-align: center;
   color: white;
+}
+
+.projects-header.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.projects-header.not-sticky {
+  position: relative;
 }
 
 @media (max-width: 575px) {

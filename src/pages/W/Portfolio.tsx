@@ -7,7 +7,7 @@ import Projects from "./components/projects/Projects";
 import SectionObserver from "./components/sectionObserver/SectionObserver";
 import Footer from "./components/footer/Footer";
 import ImageView from "./components/imageview/ImageView";
-
+import Badges from "./components/badges/Badges";
 import { dynamicWords } from "./Data";
 
 import "./Portfolio.css";
@@ -31,6 +31,7 @@ const Portfolio = () => {
         <SectionObserver sectionName="About me" threshold={0.5} />
       </div>
       <Projects />
+      <Badges />
       <Footer />
       <ImageView />
     </div>
