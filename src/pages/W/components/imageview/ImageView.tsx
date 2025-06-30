@@ -4,6 +4,10 @@ import { useImageOpenStore } from "../../store/store";
 
 import "./ImageView.css";
 
+/*
+  Component to view image
+*/
+
 const ImageView = () => {
   const { isOpen, setIsOpen, image } = useImageOpenStore();
 

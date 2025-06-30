@@ -5,7 +5,10 @@ import { useActiveSectionStore } from "../../store/store";
 
 import "./SectionObserver.css";
 
-// Observes a section's visibility and updates it to the store
+/* 
+  Observes a section's visibility and updates it to the store
+*/
+
 const SectionObserver = ({
   sectionName,
   threshold = 0, // 0.3

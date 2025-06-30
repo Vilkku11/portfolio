@@ -30,10 +30,53 @@ export type RainDrop = {
   animationDelay: string;
 };
 
+export type RainContainerStyle = React.CSSProperties & {
+  "--container-height": string;
+};
+
 export type ImageViewProps = {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   image: string;
+};
+
+// Cursor.tsx
+
+export type MixBlendMode =
+  | "normal"
+  | "multiply"
+  | "screen"
+  | "overlay"
+  | "darken"
+  | "lighten"
+  | "color-dodge"
+  | "color-burn"
+  | "hard-light"
+  | "soft-light"
+  | "difference"
+  | "exclusion"
+  | "hue"
+  | "saturation"
+  | "color"
+  | "luminosity";
+
+export type CursorVariant = {
+  x: number;
+  y: number;
+  height: number;
+  width: number;
+  offset: number;
+  transition: {
+    duration: number;
+    ease: string;
+  };
+  mixBlendMode?: MixBlendMode;
+};
+
+export type Badge = {
+  badgeImage: string;
+  badgeLink: string;
+  altText: string;
 };
 
 // Store types

@@ -1,14 +1,14 @@
 import { useRef, useState, useEffect, JSX } from "react";
 
-import { RainDrop } from "../../Types";
+import { RainDrop, RainContainerStyle } from "../../Types";
 
 import "./RainEffect.css";
 
-const RainEffect = () => {
-  type RainContainerStyle = React.CSSProperties & {
-    "--container-height": string;
-  };
+/*
+  Component of making the background rain
+*/
 
+const RainEffect = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerHeight, setContainerHeight] = useState<number>(0);
   const [rainContainerStyle, setRainContainerStyle] =

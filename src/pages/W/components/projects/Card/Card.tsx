@@ -8,6 +8,10 @@ import { Project } from "../../../Types";
 
 import "./Card.css";
 
+/*
+  Specific cards of displaying projects
+*/
+
 const Card = ({
   project,
   index,
@@ -51,12 +55,12 @@ const Card = ({
             <ProjectLink url={project.link} />
           </div>
           <div className="image-container">
-            <motion.img
+            <img
               className="image"
               src={project.image}
               alt=""
               onClick={OpenImage}
-            />
+            ></img>
           </div>
         </div>
       </motion.div>

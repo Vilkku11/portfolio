@@ -63,17 +63,18 @@
   width: 50%;
   height: auto;
   margin: 0;
-  overflow: hidden;
+  overflow: visible;
+  position: relative;
 }
 
 .image {
   width: 100%;
   max-width: 500px; /*1024px */
-  height: auto;
-  object-fit: cover;
   cursor: pointer;
+  position: relative;
   border-style: dashed;
   border-color: white;
+  z-index: 1;
 }
 
 @media (max-width: 575px) {

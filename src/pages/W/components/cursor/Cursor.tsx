@@ -1,51 +1,42 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 import { useVariantStore } from "../../store/store";
 
 import "./Cursor.css";
 
-type Variant = {
-  x: number;
-  y: number;
-  height: number;
-  width: number;
-  offset: number;
-  transition: {
-    duration: number;
-    ease: string;
-  };
-  mixBlendMode?: MixBlendMode;
-};
-
-type MixBlendMode =
-  | "normal"
-  | "multiply"
-  | "screen"
-  | "overlay"
-  | "darken"
-  | "lighten"
-  | "color-dodge"
-  | "color-burn"
-  | "hard-light"
-  | "soft-light"
-  | "difference"
-  | "exclusion"
-  | "hue"
-  | "saturation"
-  | "color"
-  | "luminosity";
+/*
+  Custom cursor on the page, idea to invert colors when moved over items
+*/
 
 const Cursor = ({ stickyElement }: { stickyElement: any }) => {
   const { currentVariant, setVariant } = useVariantStore();
+
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  const manageMouseOver = (): void => {
+    setIsHovered(true);
+    setVariant("text");
+  };
+
+  const manageMouseLeave = (): void => {
+    setIsHovered(false);
+    setVariant("default");
+  };
 
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({
     x: 0,
     y: 0,
   });
-  const [isHovered, setIsHovered] = useState<boolean>(false);
 
-  const variants: { [key: string]: Variant } = {
+  const mouseMove = (event: MouseEvent): void => {
+    setMousePosition({
+      x: event.clientX,
+      y: event.clientY,
+    });
+  };
+
+  const variants: Variants = {
     default: {
       x: mousePosition.x - 32,
       y: mousePosition.y - 32,
@@ -69,23 +60,6 @@ const Cursor = ({ stickyElement }: { stickyElement: any }) => {
       },
       mixBlendMode: "difference",
     },
-  };
-
-  const manageMouseOver = (): void => {
-    setIsHovered(true);
-    setVariant("text");
-  };
-
-  const manageMouseLeave = (): void => {
-    setIsHovered(false);
-    setVariant("default");
-  };
-
-  const mouseMove = (event: MouseEvent): void => {
-    setMousePosition({
-      x: event.clientX,
-      y: event.clientY,
-    });
   };
 
   useEffect(() => {

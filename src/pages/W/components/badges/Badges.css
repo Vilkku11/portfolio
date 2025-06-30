@@ -1,0 +1,32 @@
+.badge-section {
+  text-align: center;
+  z-index: 1;
+}
+
+.badge-header {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4rem;
+  color: white;
+}
+
+.badge-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.badge-link {
+  display: inline-block;
+}
+
+.badge-link:hover .badge-image {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.badge-image {
+  width: 10rem;
+  height: auto;
+  transition: transform 0.5s ease;
+}

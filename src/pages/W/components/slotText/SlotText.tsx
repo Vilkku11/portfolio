@@ -4,6 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { DynamicWords } from "../../Types";
 
 import "./SlotText.css";
+/*
+  component showing text in a slot machine way
+*/
 
 const SlotText = ({ words }: { words: DynamicWords[] }) => {
   //const words: string[] = ["test1", "test2", "test3", "test4"];

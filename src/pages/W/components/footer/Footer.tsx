@@ -14,6 +14,7 @@ const Footer = () => {
           className="footer-link"
           href="https://github.com/Vilkku11?tab=repositories"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Here.
         </a>

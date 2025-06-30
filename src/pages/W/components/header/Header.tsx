@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { SectionLinks } from "../../Data";
+import { sectionLinks } from "../../Data";
 import { useActiveSectionStore } from "../../store/store";
 
 import "./Header.css";
+
+/*
+  Dynamic header showing the section where currently in
+*/
 
 const Header = () => {
   const { activeSection, setActiveSection } = useActiveSectionStore();
@@ -48,7 +52,7 @@ const Header = () => {
     >
       <nav className="nav">
         <ul className="nav-list">
-          {SectionLinks.map((link) => (
+          {sectionLinks.map((link) => (
             <li key={link.name}>
               <a
                 className={
