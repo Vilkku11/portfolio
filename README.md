@@ -14,6 +14,16 @@
 
 Running service can be found [here.](https://vilkku11.github.io/portfolio/)
 
-### Tests
+## Tests
 
-robot --outputdir test_outputs tests/
+### Test env init
+
+Make python env and install dependencies.
+
+` python -m venv venv`
+
+` pip install -r requirements.txt`
+
+Run tests:
+
+`robot --outputdir test_outputs tests/`

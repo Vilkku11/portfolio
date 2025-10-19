@@ -1,11 +1,11 @@
 *** Settings ***
-Resource    ../resources/common.robot
+Resource    ./resources/common.robot
 
 Suite Setup    Open Browser To My App
 Suite Teardown    Close All Browsers
 
 *** Variables ***
-${IMAGE_SELECTOR}   css:.image-wrapper
+${IMAGE_SELECTOR}   css:.image-container
 ${IMAGE_VIEW}   css:.image-view-img
 
 *** Test Cases ***
