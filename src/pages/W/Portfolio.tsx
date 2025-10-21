@@ -25,9 +25,9 @@ const Portfolio = () => {
       <div ref={stickyElement} className="start-content" id="init">
         <h1 className="start-content-header">Hey There!</h1>
         <span className="start-content-text">
-          Software engineering graduate of Tampere University of Applied
-          Sciences, driven by <SlotText words={dynamicWords} /> and eager to
-          make an impact.
+          Software engineering graduate of{" "}
+          <strong>Tampere University of Applied Sciences</strong>, driven by{" "}
+          <SlotText words={dynamicWords} /> and eager to make an impact.
         </span>
         <SectionObserver sectionName="About me" threshold={0.5} />
       </div>
