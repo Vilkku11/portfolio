@@ -12,6 +12,7 @@ import Badges from "./components/badges/Badges";
 import { dynamicWords } from "./Data";
 
 import "./Portfolio.css";
+import ThemeSwitcher from "./components/theme/ThemeSwitcher";
 
 const Portfolio = () => {
   const stickyElement = useRef<HTMLHeadingElement | null>(null);
@@ -22,6 +23,7 @@ const Portfolio = () => {
         <RainEffect />
       </div>
       <Header />
+      <ThemeSwitcher />
       <div ref={stickyElement} className="start-content" id="init">
         <h1 className="start-content-header">Hey There!</h1>
         <span className="start-content-text">

@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ./resources/common.robot
 
-Suite Setup    common.Open Browser To My App
+Suite Setup    common.Open Browser To App
 Suite Teardown    Close All Browsers
 
 *** Variables ***

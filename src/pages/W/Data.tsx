@@ -7,7 +7,7 @@ import beginnerKernel from "../../assets/lfd103-a-beginner-s-guide-to-linux-kern
 import beginnerSecureSoftware from "../../assets/lfd121-developing-secure-software.1.png";
 import owaspTop10 from "../../assets/skf100-understanding-the-owasp-top-10-security-thre.png";
 
-import { Badge, DynamicWords, Project, SectionLink } from "./Types";
+import { Badge, DynamicWords, Project, SectionLink, Theme } from "./Types";
 
 export const dynamicWords: DynamicWords[] = [
   { word: "innovation", len: 10 },
@@ -122,3 +122,5 @@ export const badges: Badge[] = [
     altText: "LFD103: A Beginner's Guide to Linux Kernel Development",
   },
 ] as const;
+
+export const themes: Theme[] = ["black", "gray", "white"] as const;

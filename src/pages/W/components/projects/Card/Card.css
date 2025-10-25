@@ -17,9 +17,10 @@
   border-style: inset;
   border-width: 1px;
   border-radius: 1rem;
-  border-color: white;
+  border-color: var(--color-text);
   max-height: 100vh;
   overflow-y: auto;
+  background-color: var(--color-card-bg);
 }
 
 .content-divider {
@@ -40,7 +41,7 @@
   text-align: start;
   max-width: 50%;
   height: auto;
-  color: white;
+  color: var(--color-text);
   margin-left: 1rem;
   font-family: sans-serif;
   font-size: 1rem;
@@ -52,7 +53,7 @@
 .project-header {
   text-align: center;
   font-size: 3rem;
-  color: white;
+  color: var(--color-text);
 }
 
 .image-container {
@@ -73,7 +74,7 @@
   cursor: pointer;
   position: relative;
   border-style: dashed;
-  border-color: white;
+  border-color: var(--color-text);
   z-index: 1;
   transition: transform 0.1s ease;
   margin-right: 0.5rem;

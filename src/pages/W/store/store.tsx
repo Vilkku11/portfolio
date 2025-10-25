@@ -2,7 +2,12 @@ import { create } from "zustand";
 
 import { sectionLinks } from "../Data";
 
-import { VariantStore, ActiveSectionStore, ImageOpenStore } from "../Types";
+import {
+  VariantStore,
+  ActiveSectionStore,
+  ImageOpenStore,
+  ThemeStore,
+} from "../Types";
 
 export const useVariantStore = create<VariantStore>((set) => ({
   currentVariant: "default",
@@ -24,5 +29,13 @@ export const useImageOpenStore = create<ImageOpenStore>((set) => ({
   image: "",
   setImage: (newImage: string): void => {
     set({ image: newImage });
+  },
+}));
+
+export const useThemeStore = create<ThemeStore>((set) => ({
+  theme: "black",
+  setTheme: (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+    set({ theme });
   },
 }));
