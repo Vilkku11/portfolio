@@ -31,7 +31,7 @@
   margin-left: 1rem;
   margin-right: 1rem;
   transition: color 0.3s ease;
-  background-image: linear-gradient(to right, gray, gray);
+  background-color: gray;
   background-clip: text;
   -webkit-background-clip: text;
   transition: opacity 0.2s ease;
