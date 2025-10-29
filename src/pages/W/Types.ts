@@ -79,6 +79,13 @@ export type Badge = {
   altText: string;
 };
 
+export type Theme = "black" | "gray" | "white";
+
+export type ThemeVars = {
+  bg: string;
+  text: string;
+};
+
 // Store types
 
 export type VariantStore = {
@@ -96,4 +103,9 @@ export type ImageOpenStore = {
   setIsOpen: (isOpen: boolean) => void;
   image: string;
   setImage: (image: string) => void;
+};
+
+export type ThemeStore = {
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
 };

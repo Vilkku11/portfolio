@@ -5,7 +5,7 @@ import "./Badges.css";
 const Badges = () => {
   return (
     <section className="badge-section">
-      <h1 className="badge-header">Certifications</h1>
+      <h1 className="badge-header">Badges</h1>
       <div className="badge-grid">
         {badges.map((badge, index) => (
           <a

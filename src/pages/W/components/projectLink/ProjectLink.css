@@ -14,12 +14,12 @@
   font-weight: 800;
   transition: font-size 0.3s ease, letter-spacing 0.3s ease;
   font-family: monospace;
-  color: rgba(255, 255, 255, 0.9);
-  transform: ;
+  color: var(--color-text);
+  /*transform: ;*/
 }
 
 .github-link:hover span {
-  color: rgba(255, 255, 255, 1);
+  color: var(--color-text);
 }
 
 .github-link::after {

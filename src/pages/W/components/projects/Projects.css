@@ -8,7 +8,7 @@
   margin: 0;
   align-items: center;
   text-align: center;
-  color: white;
+  color: var(--color-text);
 }
 
 .projects-header.sticky {

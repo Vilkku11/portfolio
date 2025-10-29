@@ -13,7 +13,7 @@ Scroll To Element
     Scroll Element Into View        ${web_element}
     Wait Until Element Is Visible   ${element}  10s
 
-Open Browser To My App
+Open Browser To App
     SeleniumLibrary.Open Browser    ${URL}  chrome
     Maximize Browser Window
 

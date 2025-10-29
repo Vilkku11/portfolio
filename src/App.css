@@ -1,3 +1,54 @@
+:root {
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-rain: rgba(92, 92, 92, 0.11);
+  --color-header-text-bg: gray;
+  --color-header-bg: rgba(0, 0, 0, 0.8);
+  --color-card-bg: rgba(0, 0, 0, 0.99);
+}
+
+[data-theme="black"] {
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-rain: rgba(92, 92, 92, 0.11);
+  --color-header-bg: gray;
+  --color-header-bg: rgba(0, 0, 0, 0.8);
+  --color-card-bg: rgba(0, 0, 0, 0.99);
+}
+
+[data-theme="gray"] {
+  --color-bg: #3e3e3e;
+  --color-text: #ffffff;
+  --color-rain: rgba(92, 92, 92, 0.11);
+  --color-header-bg: gray;
+  --color-header-bg: rgba(62, 62, 62, 0.8);
+  --color-card-bg: rgba(62, 62, 62, 0.99);
+}
+
+[data-theme="white"] {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-rain: rgba(0, 0, 0, 0.03);
+  --color-header-bg: gray;
+  --color-header-bg: rgba(255, 255, 255, 0.7);
+  --color-card-bg: rgba(255, 255, 255, 0.99);
+}
+
+/*[data-theme] * {
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}*/
+
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
