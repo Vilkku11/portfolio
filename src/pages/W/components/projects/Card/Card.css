@@ -95,8 +95,16 @@
 }
 
 @media (max-width: 767px) {
+  .project-card-container {
+    position: relative;
+    margin-bottom: 4rem;
+  }
+
   .project-card-style {
     height: auto;
+    max-height: none;
+    overflow-y: visible;
+    top: 0;
     padding: 1rem;
     min-height: 100vh;
   }

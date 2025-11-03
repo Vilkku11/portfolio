@@ -9,12 +9,12 @@ import "./Cursor.css";
   Custom cursor on the page, idea to invert colors when moved over items
 */
 
-const Cursor = ({ stickyElement }: { stickyElement: any }) => {
-  const { currentVariant, setVariant } = useVariantStore();
+const Cursor = () /*{ stickyElement }: { stickyElement: any })*/ => {
+  const { currentVariant /*, setVariant*/ } = useVariantStore();
 
-  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isHovered /*setIsHovered*/] = useState<boolean>(false);
 
-  const manageMouseOver = (): void => {
+  /*const manageMouseOver = (): void => {
     setIsHovered(true);
     setVariant("text");
   };
@@ -22,7 +22,7 @@ const Cursor = ({ stickyElement }: { stickyElement: any }) => {
   const manageMouseLeave = (): void => {
     setIsHovered(false);
     setVariant("default");
-  };
+  };*/
 
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({
     x: 0,
@@ -47,6 +47,7 @@ const Cursor = ({ stickyElement }: { stickyElement: any }) => {
         duration: 0,
         ease: "easeInOut",
       },
+      mixBlendMode: "difference",
     },
     text: {
       x: mousePosition.x - 75,
@@ -63,13 +64,13 @@ const Cursor = ({ stickyElement }: { stickyElement: any }) => {
   };
 
   useEffect(() => {
-    stickyElement.current.addEventListener("mouseover", manageMouseOver);
-    stickyElement.current.addEventListener("mouseleave", manageMouseLeave);
+    //stickyElement.current.addEventListener("mouseover", manageMouseOver);
+    //stickyElement.current.addEventListener("mouseleave", manageMouseLeave);
     window.addEventListener("mousemove", mouseMove);
 
     return () => {
-      stickyElement.current.removeEventListener("mouseover", manageMouseOver);
-      stickyElement.current.removeEventListener("mouseleave", manageMouseLeave);
+      //stickyElement.current.removeEventListener("mouseover", manageMouseOver);
+      //stickyElement.current.removeEventListener("mouseleave", manageMouseLeave);
       window.removeEventListener("mousemove", mouseMove);
     };
   }, [isHovered]);

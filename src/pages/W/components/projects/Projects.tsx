@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { MotionValue, useScroll } from "framer-motion";
 
 import Card from "./Card/Card";
@@ -25,6 +25,14 @@ const Projects = () => {
 
   const itemRange: number = 1 / projects.length;
 
+  const [shouldAnimate, setShouldAnimate] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => setShouldAnimate(window.innerWidth > 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div>
       <h1
@@ -36,7 +44,9 @@ const Projects = () => {
       </h1>
       <div ref={container} className="projects-container" id="projects">
         {projects.map((project: Project, index: number) => {
-          const targetScale: number = 1 - (projects.length - index) * 0.05;
+          const targetScale: number = shouldAnimate
+            ? 1 - (projects.length - index) * 0.05
+            : 1;
           return (
             <Card
               key={index}
