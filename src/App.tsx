@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <Router>{routes}</Router>
+      <Router basename="/portfolio">{routes}</Router>
     </>
   );
 }
