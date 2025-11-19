@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 
 import { useImageOpenStore } from "../../store/store";
@@ -11,11 +12,23 @@ import "./ImageView.css";
 const ImageView = () => {
   const { isOpen, setIsOpen, image } = useImageOpenStore();
 
-  if (!isOpen || !image) return null;
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   const closeView = () => {
     setIsOpen(false);
   };
+
+  if (!isOpen || !image) return null;
 
   return (
     <div className="image-view-overlay" onClick={closeView}>
