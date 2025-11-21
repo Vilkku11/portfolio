@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 
 import { useImageOpenStore } from "../../store/store";
@@ -11,6 +11,7 @@ import "./ImageView.css";
 
 const ImageView = () => {
   const { isOpen, setIsOpen, image } = useImageOpenStore();
+  const [closing, setClosing] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -39,13 +40,24 @@ const ImageView = () => {
   }, [isOpen]);
 
   const closeView = () => {
-    setIsOpen(false);
+    setClosing(true);
+  };
+
+  const handleAnimationEnd = () => {
+    if (closing) {
+      setClosing(false);
+      setIsOpen(false);
+    }
   };
 
   if (!isOpen || !image) return null;
 
   return (
-    <div className="image-view-overlay" onClick={closeView}>
+    <div
+      className={`image-view-overlay ${closing ? "closing" : ""}`}
+      onClick={closeView}
+      onAnimationEnd={handleAnimationEnd}
+    >
       <div className="image-view-content" onClick={(e) => e.stopPropagation()}>
         <img src={image} alt="" className="image-view-img" />
       </div>
