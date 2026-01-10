@@ -16,3 +16,7 @@ export const motion = {
     <span ref={ref} {...props} />
   )),
 };
+
+export const useScroll = {
+  scollYProgress: 0,
+};
