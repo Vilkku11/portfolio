@@ -12,7 +12,7 @@
 
 ## Project link
 
-Running service can be found [here.](https://vilkku11.github.io/portfolio/)
+Running page can be found [here.](https://vilkku11.github.io/portfolio/)
 
 ## Tests
 

@@ -6,15 +6,43 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 5rem;
   z-index: 1000;
+  animation: imageViewFadeIn 0.25s ease forwards;
+}
+
+.image-view-overlay.closing {
+  animation: imageViewFadeOut 0.25s ease forwards;
 }
 
 .image-view-content {
   position: relative;
   max-width: 90%;
-  max-height: 90%;
+  /*max-height: 90%;*/
+  max-height: calc(90vh - 5rem);
+  aspect-ratio: 16 / 9;
+  /*animation: imageViewFadeIn 0.25 ease forwards;*/
+}
+
+@keyframes imageViewFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes imageViewFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .image-view-img {

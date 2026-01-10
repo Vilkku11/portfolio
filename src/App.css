@@ -34,12 +34,6 @@
   --color-card-bg: rgba(255, 255, 255, 0.99);
 }
 
-/*[data-theme] * {
-  transition-property: background-color, color, border-color;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-}*/
-
 html,
 body {
   height: 100%;
