@@ -25,7 +25,7 @@ const Projects = () => {
 
   const itemRange: number = 1 / projects.length;
 
-  const [shouldAnimate, setShouldAnimate] = useState(true);
+  const [shouldAnimate, setShouldAnimate] = useState(window.innerWidth > 768);
 
   useEffect(() => {
     const handleResize = () => setShouldAnimate(window.innerWidth > 768);
