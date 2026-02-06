@@ -33,7 +33,7 @@ export const useImageOpenStore = create<ImageOpenStore>((set) => ({
 }));
 
 export const useThemeStore = create<ThemeStore>((set) => ({
-  theme: "black",
+  theme: "Black",
   setTheme: (theme) => {
     document.documentElement.setAttribute("data-theme", theme);
     set({ theme });

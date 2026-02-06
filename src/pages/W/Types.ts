@@ -79,7 +79,7 @@ export type Badge = {
   altText: string;
 };
 
-export type Theme = "black" | "gray" | "white";
+export type Theme = "Black" | "Gray" | "White";
 
 export type ThemeVars = {
   bg: string;

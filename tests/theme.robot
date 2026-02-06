@@ -25,5 +25,5 @@ Select and Verify Theme Change
     Click Element    ${WHITE_THEME_BTN}
     Sleep    0.5s
     ${theme}=    Get Element Attribute    xpath=//html    data-theme
-    Should Be Equal    ${theme}    white
+    Should Be Equal    ${theme}    White
     

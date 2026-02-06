@@ -123,4 +123,4 @@ export const badges: Badge[] = [
   },
 ] as const;
 
-export const themes: Theme[] = ["black", "gray", "white"] as const;
+export const themes: Theme[] = ["Black", "Gray", "White"] as const;
