@@ -16,14 +16,11 @@ Running page can be found [here.](https://vilkku11.github.io/portfolio/)
 
 ## Tests
 
-### Test env init
+### E2E
 
-Make python env and install dependencies.
+- Robotframework
+- SeleniumLibrary
 
-` python -m venv venv`
+### Unit
 
-` pip install -r requirements.txt`
-
-Run tests:
-
-`robot --outputdir test_outputs tests/`
+- Vitest
