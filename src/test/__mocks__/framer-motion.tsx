@@ -1,22 +1,26 @@
 import React from "react";
 
-export const AnimatePresence = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
-  return <>{children}</>;
-};
+const motionProxy = new Proxy(
+  {},
+  {
+    get: (_, tag: string) => {
+      return React.forwardRef<any, any>((props, ref) => {
+        const { children, ...rest } = props;
+        const Component = tag as keyof JSX.IntrinsicElements;
+        return (
+          <Component ref={ref} {...rest}>
+            {children}
+          </Component>
+        );
+      });
+    },
+  },
+);
 
-export const motion = {
-  div: React.forwardRef<HTMLDivElement, any>((props, ref) => (
-    <div ref={ref} {...props} />
-  )),
-  span: React.forwardRef<HTMLSpanElement, any>((props, ref) => (
-    <span ref={ref} {...props} />
-  )),
-};
+export const motion = motionProxy;
 
-export const useScroll = {
-  scollYProgress: 0,
-};
+export const AnimatePresence = ({ children }: any) => <>{children}</>;
+
+export const useScroll = () => ({
+  scrollYProgress: { get: () => 0 },
+});
