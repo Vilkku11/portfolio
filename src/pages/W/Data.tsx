@@ -6,6 +6,7 @@ import homeassistant from "../../assets/homeassistant.webp";
 import beginnerKernel from "../../assets/lfd103-a-beginner-s-guide-to-linux-kernel-development.png";
 import beginnerSecureSoftware from "../../assets/lfd121-developing-secure-software.1.png";
 import owaspTop10 from "../../assets/skf100-understanding-the-owasp-top-10-security-thre.png";
+import beginnerRust from "../../assets/lfel1002-getting-started-with-rust.png";
 
 import { Badge, DynamicWords, Project, SectionLink, Theme } from "./Types";
 
@@ -120,6 +121,12 @@ export const badges: Badge[] = [
     badgeLink:
       "https://www.credly.com/badges/2d75e8b4-af93-4b45-a92b-976dc7dbefe7/public_url",
     altText: "LFD103: A Beginner's Guide to Linux Kernel Development",
+  },
+  {
+    badgeImage: beginnerRust,
+    badgeLink:
+      "https://www.credly.com/badges/0940427a-95bb-4c21-9c34-4c064144fc84/public_url",
+    altText: "LFEL1002: Getting Started with Rust",
   },
 ] as const;
 
