@@ -25,5 +25,3 @@ dist-ssr
 
 # Virtual env
 venv/
-
-test_outputs/*

@@ -13,7 +13,7 @@ describe("Zustand stores", () => {
     useVariantStore.setState(useVariantStore.getInitialState(), true);
     useActiveSectionStore.setState(
       useActiveSectionStore.getInitialState(),
-      true
+      true,
     );
     useImageOpenStore.setState(useImageOpenStore.getInitialState(), true);
     useThemeStore.setState(useThemeStore.getInitialState(), true);
@@ -34,7 +34,7 @@ describe("Zustand stores", () => {
   describe("useActiveSectionStore", () => {
     it("initializes with first section link", () => {
       expect(useActiveSectionStore.getState().activeSection).toBe(
-        sectionLinks[0].name
+        sectionLinks[0].name,
       );
     });
 
@@ -68,19 +68,19 @@ describe("Zustand stores", () => {
 
   describe("useThemeStore", () => {
     it("starts with a black theme", () => {
-      expect(useThemeStore.getState().theme).toBe("black");
+      expect(useThemeStore.getState().theme).toBe("Black");
     });
 
     it("updates the theme state", () => {
-      useThemeStore.getState().setTheme("white");
+      useThemeStore.getState().setTheme("White");
 
-      expect(useThemeStore.getState().theme).toBe("white");
+      expect(useThemeStore.getState().theme).toBe("White");
     });
 
     it("sets data-theme attribute on document element", () => {
-      useThemeStore.getState().setTheme("gray");
+      useThemeStore.getState().setTheme("Gray");
 
-      expect(document.documentElement.getAttribute("data-theme")).toBe("gray");
+      expect(document.documentElement.getAttribute("data-theme")).toBe("Gray");
     });
   });
 });

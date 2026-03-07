@@ -10,9 +10,9 @@ describe("ThemeSwitcher", () => {
     useThemeStore.setState(
       {
         ...useThemeStore.getInitialState(),
-        theme: "black",
+        theme: "Black",
       },
-      true
+      true,
     );
   });
 
@@ -26,29 +26,29 @@ describe("ThemeSwitcher", () => {
 
     fireEvent.click(screen.getByRole("button"));
 
-    expect(screen.getByText(/black/i)).toBeInTheDocument();
+    expect(screen.getByText("Black")).toBeInTheDocument();
   });
 
   it("changes theme when option is clicked", () => {
     render(<ThemeSwitcher />);
 
     fireEvent.click(screen.getByRole("button"));
-    fireEvent.click(screen.getByText("gray"));
+    fireEvent.click(screen.getByText("Gray"));
 
-    expect(useThemeStore.getState().theme).toBe("gray");
-    expect(document.documentElement.getAttribute("data-theme")).toBe("gray");
+    expect(useThemeStore.getState().theme).toBe("Gray");
+    expect(document.documentElement.getAttribute("data-theme")).toBe("Gray");
   });
 
   it("closes menu when clicking outside", async () => {
     render(<ThemeSwitcher />);
 
     fireEvent.click(screen.getByRole("button"));
-    expect(screen.getByText("black")).toBeInTheDocument();
+    expect(screen.getByText("Black")).toBeInTheDocument();
 
     fireEvent.mouseDown(document.body);
 
     await waitFor(() => {
-      expect(screen.queryByText("black")).not.toBeInTheDocument();
+      expect(screen.queryByText("Black")).not.toBeInTheDocument();
     });
   });
 });
