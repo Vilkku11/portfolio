@@ -2,13 +2,11 @@
 
 ## Setup
 
-### Python env init
+- install uv
 
-Make Python env and install dependencies:
+### Python env init (using uv)
 
-`python -m venv venv`
-
-`pip install -r requirements.txt`
+`uv sync`
 
 ## Run tests (example)
 
