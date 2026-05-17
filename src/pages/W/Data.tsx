@@ -100,7 +100,7 @@ export const projects: Project[] = [
 export const sectionLinks: SectionLink[] = [
   { name: "About me", href: "#init" },
   { name: "Projects", href: "#projects" },
-  { name: "End", href: "#end" },
+  { name: "More", href: "#more" },
 ] as const;
 
 export const badges: Badge[] = [

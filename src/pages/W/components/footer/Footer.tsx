@@ -5,7 +5,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer" id="end">
+    <div className="footer" id="more">
       <Curve />
       <h1 className="footer-header">That's all for now.</h1>
       <p>
@@ -19,7 +19,7 @@ const Footer = () => {
           Here.
         </a>
       </p>
-      <SectionObserver sectionName="End" threshold={0.5} />
+      <SectionObserver sectionName="More" threshold={0.5} />
     </div>
   );
 };

@@ -27,7 +27,7 @@ describe("Header", () => {
 
     expect(screen.getByText("About me")).toBeInTheDocument();
     expect(screen.getByText("Projects")).toBeInTheDocument();
-    expect(screen.getByText("End")).toBeInTheDocument();
+    expect(screen.getByText("More")).toBeInTheDocument();
   });
 
   it("applies active class to active section", () => {
