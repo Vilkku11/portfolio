@@ -1,12 +1,12 @@
-import netspeed from "../../assets/netspeed.webp";
-import foresthaven from "../../assets/foresthaven.webp";
-import portfolio from "../../assets/portfolio.webp";
-import homeassistant from "../../assets/homeassistant.webp";
+import netspeed from "./assets/netspeed.webp";
+import foresthaven from "./assets/foresthaven.webp";
+import portfolio from "./assets/portfolio.webp";
+import homeassistant from "./assets/homeassistant.webp";
 
-import beginnerKernel from "../../assets/lfd103-a-beginner-s-guide-to-linux-kernel-development.png";
-import beginnerSecureSoftware from "../../assets/lfd121-developing-secure-software.1.png";
-import owaspTop10 from "../../assets/skf100-understanding-the-owasp-top-10-security-thre.png";
-import beginnerRust from "../../assets/lfel1002-getting-started-with-rust.png";
+import beginnerKernel from "./assets/lfd103-a-beginner-s-guide-to-linux-kernel-development.png";
+import beginnerSecureSoftware from "./assets/lfd121-developing-secure-software.1.png";
+import owaspTop10 from "./assets/skf100-understanding-the-owasp-top-10-security-thre.png";
+import beginnerRust from "./assets/lfel1002-getting-started-with-rust.png";
 
 import { Badge, DynamicWords, Project, SectionLink, Theme } from "./Types";
 

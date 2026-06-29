@@ -8,7 +8,7 @@ describe("Badges component", () => {
     render(<Badges />);
 
     expect(
-      screen.getByRole("heading", { name: /badges/i })
+      screen.getByRole("heading", { name: /badges/i }),
     ).toBeInTheDocument();
   });
 

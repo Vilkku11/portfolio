@@ -40,7 +40,7 @@ export type ImageViewProps = {
   image: string;
 };
 
-// Cursor.tsx
+/* Cursor.tsx
 
 export type MixBlendMode =
   | "normal"
@@ -71,7 +71,7 @@ export type CursorVariant = {
     ease: string;
   };
   mixBlendMode?: MixBlendMode;
-};
+};*/
 
 export type Badge = {
   badgeImage: string;

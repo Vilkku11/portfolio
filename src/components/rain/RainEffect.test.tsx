@@ -38,7 +38,7 @@ describe("RainEffect", () => {
     const container = document.querySelector(".rain-container") as HTMLElement;
 
     expect(container.style.getPropertyValue("--container-height")).toBe(
-      "500px"
+      "500px",
     );
   });
 

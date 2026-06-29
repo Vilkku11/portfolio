@@ -23,7 +23,7 @@ describe("ImageView", () => {
         isOpen: true,
         image: "/test-image.jpg",
       },
-      true
+      true,
     );
 
     render(<ImageView />);
@@ -38,7 +38,7 @@ describe("ImageView", () => {
         isOpen: true,
         image: "/test-image.jpg",
       },
-      true
+      true,
     );
 
     render(<ImageView />);
@@ -53,7 +53,7 @@ describe("ImageView", () => {
         isOpen: true,
         image: "/test-image.jpg",
       },
-      true
+      true,
     );
 
     render(<ImageView />);
@@ -74,7 +74,7 @@ describe("ImageView", () => {
         isOpen: true,
         image: "/test-image.jpg",
       },
-      true
+      true,
     );
 
     render(<ImageView />);
@@ -95,7 +95,7 @@ describe("ImageView", () => {
         isOpen: true,
         image: "/test-image.jpg",
       },
-      true
+      true,
     );
 
     render(<ImageView />);
@@ -115,7 +115,7 @@ describe("ImageView", () => {
         isOpen: true,
         image: "/test-image.jpg",
       },
-      true
+      true,
     );
 
     const { unmount } = render(<ImageView />);

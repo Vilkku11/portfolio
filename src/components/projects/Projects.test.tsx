@@ -25,7 +25,7 @@ describe("Projects", () => {
     render(<Projects />);
 
     expect(
-      screen.getByRole("heading", { name: /projects/i })
+      screen.getByRole("heading", { name: /projects/i }),
     ).toBeInTheDocument();
   });
 

@@ -16,7 +16,7 @@ describe("SectionObserver", () => {
   beforeEach(() => {
     useActiveSectionStore.setState(
       useActiveSectionStore.getInitialState(),
-      true
+      true,
     );
   });
 

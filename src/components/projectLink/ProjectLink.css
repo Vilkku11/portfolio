@@ -12,7 +12,9 @@
   font-size: 1rem;
   position: relative;
   font-weight: 800;
-  transition: font-size 0.3s ease, letter-spacing 0.3s ease;
+  transition:
+    font-size 0.3s ease,
+    letter-spacing 0.3s ease;
   font-family: monospace;
   color: var(--color-text);
   /*transform: ;*/

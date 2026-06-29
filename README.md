@@ -7,7 +7,6 @@
 - framer-motion
 - react-icons
 - react-intersection-observer
-- react-router
 - zustand
 
 ## Project link
