@@ -1,30 +1,24 @@
-import { badges } from "../../Data";
+import BadgeConsent from "./BadgeConsent";
+import BadgeGallery from "./BadgeGallery";
+
+import { useState } from "react";
 
 import "./Badges.css";
 
 const Badges = () => {
+  const [hasConsent, setHasConsent] = useState<boolean>(false);
+
   return (
-    <section className="badge-section">
-      <h1 className="badge-header">Badges</h1>
-      <div className="badge-grid">
-        {badges.map((badge, index) => (
-          <a
-            key={index}
-            href={badge.badgeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="badge-link"
-          >
-            <img
-              src={badge.badgeImage}
-              alt={badge.altText}
-              className="badge-image"
-            />
-          </a>
-        ))}
-      </div>
+    <section className="badges-section">
+      <h1 className="badges-header">Badges</h1>
+
+      {hasConsent ? (
+        <BadgeGallery />
+      ) : (
+        <BadgeConsent onAccept={() => setHasConsent(true)} />
+      )}
     </section>
-  );
-};
+  )
+}
 
 export default Badges;

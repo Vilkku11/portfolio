@@ -1,12 +1,13 @@
 import { FaGithub } from "react-icons/fa";
 
 import "./ProjectLink.css";
+import { ProjectLinkProps } from "../../Types";
 
 /*
   Projectlink component for github repo links
 */
 
-const ProjectLink = ({ url }: { url: string }) => {
+const ProjectLink = ({ url, label = "Project in Github", icon: Icon = FaGithub }: ProjectLinkProps) => {
   return (
     <a
       href={url}
@@ -14,8 +15,8 @@ const ProjectLink = ({ url }: { url: string }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <FaGithub size={24} />
-      <span>Project in GitHub</span>
+      <Icon size={24} />
+      <span>{label}</span>
     </a>
   );
 };

@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import Badges from "./Badges";
-import { badges } from "../../Data";
+
 
 describe("Badges component", () => {
   it("renders the badges section heading", () => {
@@ -12,24 +12,24 @@ describe("Badges component", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders the correct number of badges", () => {
+  it("shows the conset card before accepting", () => {
     render(<Badges />);
-
-    const images = screen.getAllByRole("img");
-    expect(images).toHaveLength(badges.length);
+    expect(
+      screen.getByRole("button", { name: /load badges/i }),
+    ).toBeInTheDocument();
   });
 
-  it("renders each badge with correct link and text", () => {
+  it("shows the badge gallery after accepting consent", async () => {
     render(<Badges />);
 
-    badges.forEach((badge) => {
-      const image = screen.getByAltText(badge.altText);
-      expect(image).toBeInTheDocument();
+    fireEvent.click(
+      screen.getByRole("button", { name: /load badges/i }),
+    );
 
-      const link = image.closest("a");
-      expect(link).toHaveAttribute("href", badge.badgeLink);
-      expect(link).toHaveAttribute("target", "_blank");
-      expect(link).toHaveAttribute("rel", "noopener noreferrer");
-    });
-  });
+    expect(
+      screen.queryByRole("button", {
+        name: /load badges/i,
+      })
+    )
+  })
 });

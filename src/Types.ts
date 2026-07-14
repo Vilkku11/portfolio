@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { IconType } from "react-icons";
 
 export type DynamicWords = {
   word: string;
@@ -74,9 +75,7 @@ export type CursorVariant = {
 };*/
 
 export type Badge = {
-  badgeImage: string;
-  badgeLink: string;
-  altText: string;
+  id: string,
 };
 
 export type Theme = "Black" | "Gray" | "White";
@@ -109,3 +108,13 @@ export type ThemeStore = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
 };
+
+export type BadgeConsentProps = {
+  onAccept: () => void;
+}
+
+export type ProjectLinkProps = {
+  url: string;
+  label?: string;
+  icon?: IconType;
+}

@@ -52,7 +52,9 @@ const Card = ({
         <div className="content-divider">
           <div className="text-container">
             <p>{project.description}</p>
-            <ProjectLink url={project.link} />
+            <div>
+              <ProjectLink url={project.link} />
+            </div>
           </div>
           <div className="image-container">
             <img
