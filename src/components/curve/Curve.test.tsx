@@ -33,4 +33,21 @@ describe("Curve", () => {
       fireEvent.mouseLeave(box);
     }).not.toThrow();
   });
+
+  it("updates the path on window resize", () => {
+    const { container } = render(<Curve />);
+    const path = container.querySelector("path")!;
+
+    const initial = path.getAttribute("d");
+
+    Object.defineProperty(window, "innerWidth", {
+      writable: true,
+      configurable: true,
+      value: 1200,
+    });
+
+    fireEvent(window, new Event("resize"));
+
+    expect(path.getAttribute("d")).not.toBe(initial);
+  })
 });

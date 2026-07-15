@@ -15,6 +15,17 @@ const Curve = () => {
 
   useEffect(() => {
     setPath(progress);
+
+    const handleResize = () => {
+      setPath(progress);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    }
+
   }, []);
 
   const setPath = (progress: number): void => {
